@@ -566,8 +566,15 @@ x^2 - 3x + 2 = 0
 \]
 Résolvons cette équation pour \(x\), puis trouvons \(y\).
 
+$x_{1}=1$ et $x_{2}=2$
 
+Dans x + y = 3:
 
+si x=1 alors y = 2 
+
+si x=2 alors y = 1 
+
+D'où \textcolor{green}{\boxed{S= \left\{(1, 2)(2, 1)\right\}}}
 \section*{\underline{Problème: }\textbf{8 pts}}
 Soit $f(x)=\ln(x^{2}+4x+4)$
 
@@ -586,4 +593,298 @@ c- Montrer que la droite d'équation $x=-2$ est axe de  symétrie de (Cf). $\tex
 d-Tracer (Cf) et la tangente (T). $\textbf{1,5pt}$
 
 3) Montrer que $f(x)=2\ln(x+2)$ sur $ \left]-2 +\infty \right[ $. $\textbf{1pt}$
+
+\section*{\underline{\textcolor{green}{Correction du problème: \textbf{8 pts}}}}
+Soit \( f(x) = \ln(x^2 + 4x + 4) \).
+
+\subsection*{\textcolor{green}{1) a - Ensemble de définition et limites}}
+\subsubsection*{Montrer que l'ensemble de définition de \( f \) est \( D_f = \mathbb{R} \setminus \{-2\} \)}
+La fonction \( f \) est définie lorsque l'argument du logarithme est strictement positif :
+\[
+x^2 + 4x + 4 > 0
+\]
+
+Résolvons l'inéquation :
+\[
+x^2 + 4x + 4 = (x + 2)^2
+\]
+Donc, l'inéquation devient :
+\[
+(x + 2)^2 > 0
+\]
+
+La quantité \((x + 2)^2\) est positive pour tout \( x \) sauf \( x = -2 \), où elle s'annule. Ainsi, l'ensemble de définition de \( f \) est :
+\[
+D_f = \mathbb{R} \setminus \{-2\}
+\]
+
+\subsubsection*{\textcolor{green}{Déterminer les limites aux bornes de \( D_f \)}}
+Pour \( x \to -2 \), étudions le comportement de \( f(x) \) :
+
+\[
+f(x) = \ln((x + 2)^2)
+\]
+\[
+f(x) = \ln(x + 2)^2 = 2 \ln|x + 2|
+\]
+
+1. Lorsque \( x \to -2^+ \) (par la droite) :
+\[
+x + 2 \to 0^+ \implies \ln|x + 2| \to -\infty \implies 2 \ln|x + 2| \to -\infty
+\]
+Donc,
+\[
+\lim_{x \to -2^+} f(x) = -\infty
+\]
+
+2. Lorsque \( x \to -2^- \) (par la gauche) :
+\[
+x + 2 \to 0^- \implies \ln|x + 2| \to -\infty \implies 2 \ln|x + 2| \to -\infty
+\]
+Donc,
+\[
+\lim_{x \to -2^-} f(x) = -\infty
+\]
+
+Aux bornes de \( D_f \), c'est-à-dire \( x \to \pm \infty \) :
+
+1. Lorsque \( x \to +\infty \) :
+\[
+x^2 + 4x + 4 \sim x^2 \implies \ln(x^2 + 4x + 4) \sim \ln x^2 = 2 \ln x
+\]
+Donc,
+\[
+\lim_{x \to +\infty} f(x) = \lim_{x \to +\infty} 2 \ln x = +\infty
+\]
+
+2. Lorsque \( x \to -\infty \) :
+\[
+x^2 + 4x + 4 \sim x^2 \implies \ln(x^2 + 4x + 4) \sim \ln x^2 = 2 \ln |x|
+\]
+Donc,
+\[
+\lim_{x \to -\infty} f(x) = \lim_{x \to -\infty} 2 \ln |x| = +\infty
+\]
+
+\subsection*{\textcolor{green}{b - Étudions les variations de \( f \)}}
+
+Pour étudier les variations de \( f \), nous allons calculer sa dérivée et analyser son signe.
+
+\subsubsection*{\textcolor{green}{Calcul de la dérivée de \( f \)}}
+La fonction \( f(x) \) est définie par :
+\[
+f(x) = \ln(x^2 + 4x + 4)
+\]
+Calculons \( u'(x) \) :
+\[
+u(x) = x^2 + 4x + 4 \implies u'(x) = 2x + 4
+\]
+
+Donc, la dérivée de \( f \) est :
+\[
+f'(x) = \frac{2x + 4}{x^2 + 4x + 4}
+\]
+
+\subsubsection*{\textcolor{green}{Signe de \( f'(x) \)}}
+Analysons le signe de \( f'(x) \) :
+\[
+f'(x) = \frac{2(x + 2)}{(x + 2)^2}
+\]
+Le signe de \( f'(x) \) dépend du signe de \( (x + 2) \) :
+
+\(\forall x \in ]-\infty, -2[ \), \( f'(x) < 0 \) est croissante.
+
+\(\forall x \in ]-2, +\infty[ \), \( f'(x) > 0 \) est décroissante.
+
+\subsection*{\textcolor{green}{2) Intersection de la courbe \( Cf \) avec les axes}}
+
+\subsubsection*{\textcolor{green}{a - Intersection avec l'axe des ordonnées}}
+
+Pour trouver l'intersection avec l'axe des ordonnées, nous devons évaluer \( f(0) \) :
+\[
+f(0) = \ln(0^2 + 4 \cdot 0 + 4) = \ln(4) = \ln(2^2) = 2 \ln(2)
+\]
+
+Donc, la courbe \( Cf \) intersecte l'axe des ordonnées au point \((0, 2\ln(2))\).
+
+\subsubsection*{\textcolor{green}{b - Intersection avec l'axe des abscisses}}
+
+Pour trouver l'intersection avec l'axe des abscisses, nous devons résoudre \( f(x) = 0 \):
+\[
+\ln(x^2 + 4x + 4) = 0
+\]
+\[
+x^2 + 4x + 4 = e^0 = 1
+\]
+\[
+x^2 + 4x + 4 - 1 = 0
+\]
+\[
+x^2 + 4x + 3 = 0
+\]
+
+Résolvons cette équation quadratique :
+\[
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\]
+où \( a = 1 \), \( b = 4 \), et \( c = 3 \).
+
+\[
+x = \frac{-4 \pm \sqrt{16 - 12}}{2} = \frac{-4 \pm 2}{2}
+\]
+\[
+x = \frac{-4 + 2}{2} = -1 \quad \text{ou} \quad x = \frac{-4 - 2}{2} = -3
+\]
+
+Donc, la courbe \( Cf \) intersecte l'axe des abscisses aux points \((-1, 0)\) et \((-3, 0)\).
+
+\subsection*{\textcolor{green}{2) b - Équation de la tangente à \( Cf \) au point d'abscisse \( 0 \)}}
+
+\subsubsection*{\textcolor{green}{1. Calcul de \( f(0) \)}}
+\[
+f(0) = \ln(0^2 + 4 \cdot 0 + 4) = \ln(4) = \ln(2^2) = 2 \ln(2)
+\]
+
+Le point de tangence est donc \((0, 2 \ln(2))\).
+
+\subsubsection*{\textcolor{green}{2. Calcul de la dérivée \( f'(x) \) et évaluation en \( x = 0 \)}}
+La dérivée de \( f \) est :
+\[
+f(x) = \ln((x + 2)^2) = 2 \ln|x + 2|
+\]
+
+Évaluons \( f'(x) \) en \( x = 0 \) :
+\[
+f'(0) = \frac{2}{0 + 2} = \frac{2}{2} = 1
+\]
+
+\subsubsection*{\textcolor{green}{3. Équation de la tangente}}
+L'équation de la tangente \( T \) en \( x = 0 \) est donnée par :
+\[
+y = f(0) + f'(0)(x - 0)
+\]
+\[
+y = 2 \ln(2) + 1 \cdot x
+\]
+\[
+y = x + 2 \ln(2)
+\]
+
+Ainsi, l'équation de la tangente \( T \) à \( Cf \) au point d'abscisse \( 0 \) est :
+\[\textcolor{green}{\boxed{
+(T):y = x + 2 \ln(2)
+}}\]
+
+\subsection*{\textcolor{green}{2) c - Symétrie de la courbe par rapport à la droite \( x = -2 \)}}
+
+Pour montrer que la droite d'équation \( x = -2 \) est un axe de symétrie de \( Cf \), nous devons prouver que \( f(-x-4) = f(x) \).
+
+Commençons par exprimer \( f(-x-4) \) :
+\[
+f(-x-4) = \ln((-x-4)^2 + 4(-x-4) + 4)
+\]
+
+Simplifions cette expression :
+\[
+f(-x-4) = \ln((-x-4)^2 + 4(-x-4) + 4)
+\]
+\[
+= \ln(x^2 + 8x + 16 + 4(-x-4) + 4)
+\]
+\[
+= \ln(x^2 + 8x + 16 - 4x - 16 + 4)
+\]
+\[
+= \ln(x^2 + 4x + 4)
+\]
+
+Nous observons que :
+\[
+f(-x-4) = \ln(x^2 + 4x + 4) = f(x)
+\]
+
+Ainsi, nous avons montré que \( f(x) = f(-x-4) \), ce qui implique que la courbe \( Cf \) est symétrique par rapport à la droite \( x = -2 \).
+\subsection*{\textcolor{green}{2) d - Tracé de \( Cf \) et de la tangente \( T \)}}
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = middle,
+    xlabel = $x$,
+    ylabel = $y$,
+    domain=-6:2,
+    samples=100,
+    width=12cm,
+    height=8cm,
+    xtick={-6,-4,-2,0,2},
+    ytick={-10, -5, 0, 5, 10},
+    legend pos=outer north east,
+    grid = major,
+    grid style={dashed, gray!30}
+]
+
+% Tracé de la courbe Cf
+\addplot [
+    domain=-6:2, 
+    samples=100, 
+    color=blue,
+    thick
+] {ln(x^2 + 4*x + 4)};
+\addlegendentry{$f(x) = \ln(x^2 + 4x + 4)$}
+
+% Tracé de la tangente T
+\addplot [
+    domain=-6:2, 
+    samples=100, 
+    color=red,
+    dashed,
+    thick
+] {x + 2*ln(2)};
+\addlegendentry{Tangente $y = x + 2\ln(2)$}
+
+% Tracé de la droite x = -2
+\addplot [
+    domain=-10:10,
+    samples=2,
+    color=green,
+    dashed
+] coordinates {(-2,-10) (-2,10)};
+\addlegendentry{Symétrie $x = -2$}
+
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\subsection*{\textcolor{green}{3) Preuve que \( f(x) = 2\ln(x+2) \) sur \( \left]-2, +\infty \right[ \)}}
+
+Commençons par simplifier l'expression de \( f(x) \):
+\[
+f(x) = \ln(x^2 + 4x + 4)
+\]
+
+Nous reconnaissons que \( x^2 + 4x + 4 \) peut être factorisé en un carré parfait :
+\[
+x^2 + 4x + 4 = (x + 2)^2
+\]
+
+Ainsi,
+\[
+f(x) = \ln((x + 2)^2)
+\]
+
+Nous utilisons maintenant la propriété des logarithmes qui dit que \( \ln(a^b) = b \ln(a) \):
+\[
+f(x) = \ln((x + 2)^2) = 2 \ln(x + 2)
+\]
+
+Par conséquent, nous avons montré que :
+\[
+f(x) = 2 \ln(x + 2)
+\]
+
+Il est important de noter que l'expression \( \ln((x + 2)^2) = 2 \ln(x + 2) \) est définie pour \( x + 2 > 0 \), c'est-à-dire \( x > -2 \). Donc, sur l'intervalle \( \left]-2, +\infty \right[ \), nous avons :
+\[
+f(x) = 2 \ln(x + 2)
+\]
+
 \end{document}
