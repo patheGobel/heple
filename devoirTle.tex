@@ -98,7 +98,7 @@ Donc D=$\left]\frac{1}{2} , +\infty\right[ $
 
 $\ln(2x-1)=\ln(3x+3)\Longrightarrow 2x-1=3x+3\Longrightarrow x=-4$
 
-Comme $x\notin$D Donc \textcolor{green}{\boxed{S=\emptyset}}
+Comme $-4\notin$D Donc \textcolor{green}{\boxed{S=\emptyset}}
 
 --------------------------------------------------------------------------------------------------------------
 
@@ -129,15 +129,22 @@ C'est-à-dire \(x=1\) et \(x=-1\) et \(x=-2\)
 \draw (-8,7) node[anchor=north west] {$+\infty$};
 \draw (-21,5.7) node[anchor=north west] {$x-1$};
 \draw (-15.8,5.7) node[anchor=north west] {$-$};
-\draw (-15.3,4.8) node[anchor=north west] {$O$};
+\draw (-15,5.7) node[anchor=north west] {$-$};
+\draw (-12,5.7) node[anchor=north west] {$-$};
+\draw (-11.3,5.7) node[anchor=north west] {$O$};
 \draw (-10.5,5.7) node[anchor=north west] {$+$};
 \draw (-21,4.7) node[anchor=north west] {$x+1$};
-\draw (-15,5.7) node[anchor=north west] {$-$};
 \draw (-15.8,4.7) node[anchor=north west] {$-$};
-\draw (-11.3,5) node[anchor=north west] {$O$};
+\draw (-15,4.7) node[anchor=north west] {$-$};
+\draw (-13.4,4.7) node[anchor=north west] {$O$};
+\draw (-12,4.7) node[anchor=north west] {$+$};
 \draw (-10.5,4.7) node[anchor=north west] {$+$};
-\draw (-15,4.7) node[anchor=north west] {$+$};
 \draw (-21,3.7) node[anchor=north west] {$x+2$};
+\draw (-15.8,4) node[anchor=north west] {$-$};
+\draw (-15.3,4) node[anchor=north west] {$O$};
+\draw (-15,4) node[anchor=north west] {$+$};
+\draw (-12,4) node[anchor=north west] {$+$};
+\draw (-10.5,4) node[anchor=north west] {$+$};
 \draw [line width=2pt] (-15,6)-- (-15,3); %(-13,6)-- (-13,4);
 \draw [line width=2pt] (-11,6)-- (-11,3); %(-13,6)-- (-13,4);
 \draw [line width=2pt] (-13.1,6)-- (-13.1,3); %(-13,6)-- (-13,4);
@@ -146,7 +153,7 @@ C'est-à-dire \(x=1\) et \(x=-1\) et \(x=-2\)
 \draw (-11.3,7) node[anchor=north west] {$1$};
 \end{tikzpicture}
 
-Donc D=$kk$
+Donc D=$]1;+\infty[$
 
 \textbf{\underline{\textcolor{green}{Résolution}}}
 \[
@@ -156,10 +163,12 @@ Donc D=$kk$
 (x-1)(x+1)=x+2 \Longrightarrow x^2-1=x+2 \Longrightarrow x^2-x-3=0
 \]
 \[
-(x-3)(x+1)=0 \Longrightarrow x=3 \text{ ou } x=-1
+\Delta=13 \Longrightarrow x=\frac{1-\sqrt{13}}{2} \text{ ou } x=\frac{1+\sqrt{13}}{2}
 \]
 
-Comme \(x \notin D\) pour \(x=-1\), Donc \(S=\{3\}\).
+Comme $\frac{1+\sqrt{13}}{2}\in$D et $\frac{1-\sqrt{13}}{2}\notin$D Donc \textcolor{green}{\boxed{S=\left\lbrace \frac{1+\sqrt{13}}{2}\right\rbrace }}
+
+-----------------------------------------------------------------------------------------------------------
 
 \textbf{3. \(\ln(2x-1)+2\ln(x+1)=\ln(x-1)\)}
 
@@ -167,7 +176,50 @@ Comme \(x \notin D\) pour \(x=-1\), Donc \(S=\{3\}\).
 
 L'équation n'a de sens que si \(2x-1>0\), \(x+1>0\) et \(x-1>0\).
 
-C'est-à-dire \(x>\frac{1}{2}\) et \(x>1\).
+Posons \(2x-1=0\) et \(x+1=0\) et \(x-1=0\).
+
+C'est-à-dire \(x=\frac{1}{2}\) et \(x=-1\) et \(x=1\)
+
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+%\draw [color=cqcqcq,, xstep=1cm,ystep=1cm] (-7,-10) grid (-22,17);
+\clip(-22,3) rectangle (12,10);
+\draw [line width=2pt] (-23,8)-- (-7,8); %première ligne A(-22,8)---B(-7,8)
+\draw [line width=2pt] (-22,6)-- (-7,6); %deuxième ligne
+\draw [line width=2pt] (-22,5)-- (-7,5); %troisième  ligne
+\draw [line width=2pt] (-22,4)-- (-7,4); %quatrième ligne
+\draw [line width=2pt] (-22,3)-- (-7,3); %cinquième ligne
+\draw [line width=2pt] (-22,3)-- (-22,8); %première colonne (-22,4)<----(-22,8);
+\draw [line width=2pt] (-18,8)-- (-18,3); %deuxième colone  (-18,8)--->(-18,4);
+\draw [line width=2pt] (-7,8)-- (-7,3); %quatrième colonne (-7,8)-->(-7,4);
+\draw (-21,7) node[anchor=north west] {$x$};
+\draw (-18,7) node[anchor=north west] {$-\infty$};
+\draw (-8,7) node[anchor=north west] {$+\infty$};
+\draw (-21,5.7) node[anchor=north west] {$x-1$};
+\draw (-15.8,5.7) node[anchor=north west] {$-$};
+\draw (-15,5.7) node[anchor=north west] {$-$};
+\draw (-12,5.7) node[anchor=north west] {$-$};
+\draw (-11.3,5.7) node[anchor=north west] {$O$};
+\draw (-10.5,5.7) node[anchor=north west] {$+$};
+\draw (-21,4.7) node[anchor=north west] {$2x-1$};
+\draw (-15.8,4.7) node[anchor=north west] {$-$};
+\draw (-15,4.7) node[anchor=north west] {$-$};
+\draw (-13.4,4.7) node[anchor=north west] {$O$};
+\draw (-12,4.7) node[anchor=north west] {$+$};
+\draw (-10.5,4.7) node[anchor=north west] {$+$};
+\draw (-21,3.7) node[anchor=north west] {$x+1$};
+\draw (-15.8,4) node[anchor=north west] {$-$};
+\draw (-15.3,4) node[anchor=north west] {$O$};
+\draw (-15,4) node[anchor=north west] {$+$};
+\draw (-12,4) node[anchor=north west] {$+$};
+\draw (-10.5,4) node[anchor=north west] {$+$};
+\draw [line width=2pt] (-15,6)-- (-15,3); %(-13,6)-- (-13,4);
+\draw [line width=2pt] (-11,6)-- (-11,3); %(-13,6)-- (-13,4);
+\draw [line width=2pt] (-13.1,6)-- (-13.1,3); %(-13,6)-- (-13,4);
+\draw (-15.5,7) node[anchor=north west] {$-1$};
+\draw (-13.5,7) node[anchor=north west] {$\frac{1}{2}$};
+\draw (-11.3,7) node[anchor=north west] {$1$};
+\end{tikzpicture}
 
 Donc \(D = ]1, +\infty[\).
 
@@ -180,13 +232,11 @@ Donc \(D = ]1, +\infty[\).
 (2x-1)(x+1)^2=x-1
 \]
 
-Comme \(x > 1\), on peut simplifier :
-
 \[
 (2x-1)(x+1)^2=x-1 \Longrightarrow (2x-1)(x^2 + 2x + 1)=x-1
 \]
 \[
-2x^3 + 5x^2 + x - 2x^2 - 2x - 1 = x - 1 \Longrightarrow 2x^3 + 3x^2 - 3x = 0
+2x^3 + 4x^2 + 2x - x^2 - 2x - 1 = x - 1 \Longrightarrow 2x^3 + 3x^2 - 3x = 0
 \]
 \[
 x(2x^2 + 3x - 3) = 0
@@ -195,7 +245,7 @@ x(2x^2 + 3x - 3) = 0
 x=0 \text{ ou } 2x^2 + 3x - 3 = 0
 \]
 
-Comme \(x \notin D\) pour \(x=0\), nous résolvons \(2x^2 + 3x - 3 = 0\):
+nous résolvons \(2x^2 + 3x - 3 = 0\):
 
 \[
 \Delta = 3^2 - 4 \times 2 \times (-3) = 9 + 24 = 33
@@ -206,7 +256,13 @@ x = \frac{-3 \pm \sqrt{33}}{4}
 
 Nous obtenons \(x = \frac{-3 + \sqrt{33}}{4}\) et \(x = \frac{-3 - \sqrt{33}}{4}\).
 
-Comme \(x \notin D\) pour \(x = \frac{-3 - \sqrt{33}}{4}\), Donc \(S = \left\{\frac{-3 + \sqrt{33}}{4}\right\}\).
+Comme \(0 \notin D\) ; \(\frac{-3 + \sqrt{33}}{4} \in D\) et \(\frac{-3 - \sqrt{33}}{4} \notin D\)  
+
+Donc \(S = \left\{\frac{-3 + \sqrt{33}}{4}\right\}\).
+
+\textcolor{green}{\boxed{S= \left\{\frac{-3 + \sqrt{33}}{4}\right\}}}
+
+-----------------------------------------------------------------------------------------------------
 
 \textbf{4. \(\ln(x-1)<\ln(3-x)\)}
 
@@ -225,7 +281,9 @@ C'est-à-dire \(1<x<3\).
 2x<4\Longrightarrow x<2
 \]
 
-Donc \(S=]1,2[\).
+\textcolor{green}{\boxed{S=]1,2[}}
+
+------------------------------------------------------------------------------------------------------------
 
 \textbf{5. \(\ln(1-x)-\ln(2x+3)\geq\ln(x-2)\)}
 
