@@ -302,7 +302,7 @@ D = \emptyset \Longrightarrow S = \emptyset
 \section*{\underline{Exercice 2: }\textbf{6 pts}}
 \subsection*{ 1) Développer } $(x-1)(2x+1)(x+3)$
 \subsection*{ 2) Résoudre } $2e^{3x}+5e^{2x}-4e^{x}-3$
-\subsection*{ 3) Développer } $8x^{4}-6x^{2}+1=0$ puis $8e^{4x}-6e^{2x}+1=0$
+\subsection*{ 3) Résoudre } $8x^{4}-6x^{2}+1=0$ puis $8e^{4x}-6e^{2x}+1=0$
 \subsection*{ 4) Développer } $(3-x)(2x+1)$ et $(x-2)(3-x)(2x+1)$
 \subsection*{ 5) Développer } $3e^{-2x}-5e^{-x}-2=0$ ; $-2e^{3x+1}+9e^{2x+1}+-7e^{x+1}-6e=0$
 \subsection*{ 5) Développer $\mathbb{R}^{2}$} 
@@ -311,6 +311,263 @@ x + y = 3 \\
 \ln x + \ln y = \ln 2
 \end{cases}\)
 \section*{\underline{\textcolor{green}{Correction Exercice 2: \textbf{6 pts}}}}
+
+\section*{\underline{Exercice 2: }\textbf{6 pts}}
+
+\subsection*{1) Développer } 
+\[
+(x-1)(2x+1)(x+3)
+\]
+
+\subsection*{Solution}
+Développons pas à pas :
+\[
+(x-1)(2x+1)(x+3)
+\]
+\[
+(x-1)(2x^2 + 7x + 3)
+\]
+\[
+x(2x^2 + 7x + 3) - 1(2x^2 + 7x + 3)
+\]
+\[
+2x^3 + 7x^2 + 3x - 2x^2 - 7x - 3
+\]
+\[
+2x^3 + 5x^2 - 4x - 3
+\]
+
+\subsection*{2) Résoudre } 
+\[
+2e^{3x}+5e^{2x}-4e^{x}-3 = 0
+\]
+
+\subsection*{Solution}
+Notons \( u = e^x \). L'équation devient alors :
+\[
+2u^3 + 5u^2 - 4u - 3 = 0
+\]
+Cette équation cubique est la forme dévelloppée de $(x-1)(2x+1)(x+3)$.
+
+Donc $2u^3 + 5u^2 - 4u - 3=(u-1)(2u+1)(u+3)=(e^x-1)(2e^x+1)(e^x+3)$
+\[
+2u^3 + 5u^2 - 4u - 3 = 0 \Longrightarrow e^x=1 \text{ ou } e^x=-\frac{1}{2} \text{ ou } e^x=-3
+\]
+D'où \textcolor{green}{\boxed{S= \left\{0\right\}}}
+\subsection*{3) Résoudre} 
+\[
+8x^4 - 6x^2 + 1 = 0
+\]
+puis 
+\[
+8e^{4x} - 6e^{2x} + 1 = 0
+\]
+
+\subsection*{Solution}
+Pour \(8x^4 - 6x^2 + 1 = 0\) :
+\[
+\text{Posons } y = x^2, \text{ ainsi } 8y^2 - 6y + 1 = 0
+\]
+Résolvons cette équation quadratique pour \(y\).
+
+L'équation quadratique est :
+\[
+8y^2 - 6y + 1 = 0
+\]
+
+Les solutions de cette équation sont données par la formule quadratique :
+\[
+y = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\]
+
+Ici, \(a = 8\), \(b = -6\), et \(c = 1\). Calculons le discriminant :
+\[
+\Delta = b^2 - 4ac = (-6)^2 - 4 \cdot 8 \cdot 1 = 36 - 32 = 4
+\]
+
+Puis, trouvons les racines :
+\[
+y = \frac{6 \pm \sqrt{4}}{2 \cdot 8} = \frac{6 \pm 2}{16}
+\]
+
+Cela donne les solutions :
+\[
+y_1 = \frac{6 + 2}{16} = \frac{8}{16} = \frac{1}{2}
+\]
+\[
+y_2 = \frac{6 - 2}{16} = \frac{4}{16} = \frac{1}{4}
+\]
+
+Comme \(y = x^2\), nous avons :
+\[
+x^2 = \frac{1}{2} \implies x = \pm \sqrt{\frac{1}{2}} = \pm \frac{\sqrt{2}}{2}
+\]
+\[
+x^2 = \frac{1}{4} \implies x = \pm \frac{1}{2}
+\]
+
+Ainsi, les solutions pour \(x\) sont :
+\[
+x = \pm \frac{\sqrt{2}}{2}, \quad x = \pm \frac{1}{2}
+\]
+
+\textcolor{green}{\boxed{S=\left\lbrace -\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2}, -\frac{1}{2}, \frac{1}{2}\right\rbrace }}
+
+La forme dévélopée de \(8x^4 - 6x^2 + 1\) est \((x-\frac{\sqrt{2}}{2})(x+\frac{\sqrt{2}}{2})(x-\frac{1}{2})(x+\frac{1}{2})\)
+
+Pour \(8e^{4x} - 6e^{2x} + 1 = 0\) :
+\[
+\text{Posons } u = e^{2x}, \text{ ainsi } 8u^2 - 6u + 1 = 0
+\]
+Cette équation cubique est la forme dévelloppée de \((u-\frac{\sqrt{2}}{2})(u+\frac{\sqrt{2}}{2})(u-\frac{1}{2})(u+\frac{1}{2})\).
+
+Donc $8u^2 - 6u + 1 - 3=(u-\frac{\sqrt{2}}{2})(u+\frac{\sqrt{2}}{2})(u-\frac{1}{2})(u+\frac{1}{2})$
+\[
+8u^2 - 6u + 1 - 3 = 0 \Longrightarrow e^{2x}=\frac{\sqrt{2}}{2} \text{ ou } e^{2x}=-\frac{\sqrt{2}}{2} \text{impossible ou } e^{2x}=\frac{1}{2} \text{ ou } e^{2x}=-\frac{1}{2} \text{impossible}
+\]
+
+\[
+2x=\ln(\frac{\sqrt{2}}{2}) \text{ ou } 2x=\ln(\frac{1}{2})
+\]
+
+\[
+x=\frac{\ln(\frac{\sqrt{2}}{2})}{2} \text{ ou } x=\frac{\ln(\frac{1}{2})}{2}
+\]
+\[
+x=\frac{\ln(\frac{\sqrt{2}}{2})}{2} \text{ ou } x=\frac{\ln(\frac{1}{2})}{2}
+\]
+D'où \textcolor{green}{\boxed{S= \left\{\frac{\ln(\frac{\sqrt{2}}{2})}{2}, \frac{\ln(\frac{1}{2})}{2}\right\}}}
+
+\subsection*{4) Développer } 
+\[
+(3-x)(2x+1) \text{ et } (x-2)(3-x)(2x+1)
+\]
+
+\subsection*{Solution}
+\textcolor{green}{\underline{Pour \((3-x)(2x+1)\)} }:
+\[
+3(2x+1) - x(2x+1)
+\]
+\[
+6x + 3 - 2x^2 - x
+\]
+\[
+-2x^2 + 5x + 3
+\]
+Donc, l'expression développée est :
+\[\textcolor{green}{\boxed{
+(3-x)(2x+1) = -2x^2 + 5x + 3
+}}\]
+\textcolor{green}{\underline{Pour \((x-2)(3-x)(2x+1)\)} }:
+\[
+(x-2)(-2x^2 + 5x + 3)
+\]
+Développons cette expression pas à pas.
+
+1. Écrivons l'expression initiale :
+\[
+(x-2)(-2x^2 + 5x + 3)
+\]
+
+2. Utilisons la distributivité pour développer chaque terme de \((x-2)\) avec chaque terme de \((-2x^2 + 5x + 3)\) :
+\[
+x(-2x^2 + 5x + 3) - 2(-2x^2 + 5x + 3)
+\]
+
+3. Distribuons \(x\) dans \((-2x^2 + 5x + 3)\) :
+\[
+x \cdot (-2x^2) + x \cdot 5x + x \cdot 3 = -2x^3 + 5x^2 + 3x
+\]
+
+4. Distribuons \(-2\) dans \((-2x^2 + 5x + 3)\) :
+\[
+-2 \cdot (-2x^2) + (-2) \cdot 5x + (-2) \cdot 3 = 4x^2 - 10x - 6
+\]
+
+5. Combinons les termes développés :
+\[
+-2x^3 + 5x^2 + 3x + 4x^2 - 10x - 6
+\]
+
+6. Simplifions en combinant les termes similaires :
+\[
+-2x^3 + (5x^2 + 4x^2) + (3x - 10x) - 6
+\]
+\[
+-2x^3 + 9x^2 - 7x - 6
+\]
+
+Donc, l'expression développée est :
+\[\textcolor{green}{\boxed{
+(x-2)(-2x^2 + 5x + 3) = -2x^3 + 9x^2 - 7x - 6
+}}\]
+
+\subsection*{5) Résolvons } 
+\[
+3e^{-2x}-5e^{-x}-2=0 \quad ; \quad -2e^{3x+1}+9e^{2x+1}-7e^{x+1}-6e=0
+\]
+
+\subsection*{Solution}
+\textcolor{green}{\underline{Pour \(3e^{-2x}-5e^{-x}-2=0\)}}:
+\[
+\text{Posons } u = e^{-x}, \text{ ainsi } 3u^2 - 5u - 2 = 0
+\]
+
+Cette équation cubique est la forme dévelloppée de $(3-u)(2u+1)$.
+
+Donc $3e^{-2x}-5e^{-x}-2=(3-e^{-x})(2e^{-x}+1)$
+\[
+(3-e^{-x})(2e^{-x}+1)= 0 \Longrightarrow e^{-x}=3 \text{ ou } e^{-x}=-\frac{1}{2} \text{ impossible }
+\]
+\[
+x=-\ln(3)
+\]
+D'où \textcolor{green}{\boxed{S= \left\{-\ln(3)\right\}}}
+
+\textcolor{green}{\underline{Pour \(-2e^{3x+1}+9e^{2x+1}-7e^{x+1}-6e=0\) }}:
+\[
+\text{Posons } v = e^{x}, \text{ ainsi } -2v^3e + 9v^2e - 7ve - 6e = 0 \Longrightarrow -2v^3 + 9v^2 - 7v - 6 = 0
+\]
+Cette équation cubique est la forme dévelloppée de $(u-2)(3-u)(2u+1)$.
+
+Donc $-2e^{3x+1}+9e^{2x+1}-7e^{x+1}-6e=(e^{x}-2)(3-e^{x})(2e^{x}+1)$
+\[
+(e^{x}-2)(3-e^{x})(2e^{x}+1)= 0 \Longrightarrow e^{x}=2 \text{ ou } e^{x}=3 \text{ ou } e^{x}=-\frac{1}{2} \text{ impossible }
+\]
+\[
+x=\ln(2) \text{ ou }x=\ln(3), 
+\]
+D'où \textcolor{green}{\boxed{S= \left\{\ln(2),\ln(3)\right\}}}
+
+\subsection*{6) Résoudre $\mathbb{R}^{2}$ } 
+\[
+\begin{cases}
+x + y = 3 \\
+\ln x + \ln y = \ln 2
+\end{cases}
+\]
+
+\subsection*{Solution}
+La première équation donne \( y = 3 - x \). En substituant cela dans la deuxième équation :
+\[
+\ln x + \ln (3 - x) = \ln 2
+\]
+\[
+\ln (x(3 - x)) = \ln 2
+\]
+\[
+x(3 - x) = 2
+\]
+\[
+3x - x^2 = 2
+\]
+\[
+x^2 - 3x + 2 = 0
+\]
+Résolvons cette équation pour \(x\), puis trouvons \(y\).
+
+
+
 \section*{\underline{Problème: }\textbf{8 pts}}
 Soit $f(x)=\ln(x^{2}+4x+4)$
 
