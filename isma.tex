@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+
+\usepackage{color, soul}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tkz-tab}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes.geometric, fit}
+
+\usepackage[margin=2cm]{geometry}
+
+\begin{document}
+
+\begin{minipage}{0.8\textwidth}
+    Mamadou Demba                           
+\end{minipage}
+\begin{minipage}{0.8\textwidth}
+   DIALLO                          
+\end{minipage}
+\section*{Exercice }
+Pour un entier naturel \( n \geq 2 \), la fonction \( f_n \) est définie par :
+\[ f_n(x) = \frac{1 + n \ln x}{x^2} \]
+pour \( x > 0 \).
+
+\section*{1. Calcul de la dérivée \( f'_n(x) \)}
+Appliquons la règle de dérivation d'un quotient :
+
+\[ f'_n(x) = \frac{(1 + n \ln x)' \cdot x^2 - (1 + n \ln x) \cdot (x^2)'}{(x^2)^2} \]
+
+\[ f'_n(x) = \frac{\left( \frac{n}{x} \right) \cdot x^2 - (1 + n \ln x) \cdot 2x}{x^4} \]
+
+\[ f'_n(x) = \frac{n x - 2x (1 + n \ln x)}{x^4} \]
+
+\[ f'_n(x) = \frac{nx - 2x - 2nx \ln x}{x^4} \]
+
+\[ f'_n(x) = \frac{x (n - 2 - 2n \ln x)}{x^3} \]
+
+Ainsi, la dérivée de \( f_n(x) \) est :
+
+\[ f'_n(x) = \frac{n - 2 - 2n \ln x}{x^3} \]
+
+\section*{2. Étude du signe de \( f'_n(x) \)}
+\begin{center}
+	\textbf{\textcolor{red}{Autre Approche}}
+\end{center}
+
+Le signe de \( f'_n(x) \), dépend du numérateur \( n - 2 - 2n \ln x \) car \( \forall x>, x^{3}>0 \).
+
+\[\text{Supposons que }  n - 2 - 2n \ln x >0 \text{ donc : }\]
+
+\[ n - 2 - 2n \ln x > 0 \implies 2n \ln x < n - 2 \implies \ln x < \frac{n - 2}{2n} \implies x < e^{\frac{n - 2}{2n}} \implies x\in \left]0,e^{\frac{n - 2}{2n}}\right[ \] 
+
+\[\text{Donc si } x\in \left]0,e^{\frac{n - 2}{2n}}\right[ \text{alors } n - 2 - 2n \ln x >0 \text{ par conséquent, } f'_n(x)>0. \]
+
+\[\text{si } x\notin \left]0,e^{\frac{n - 2}{2n}}\right[ \text{ c'est-à-dire } x\in \left]e^{\frac{n - 2}{2n}},+\infty\right[ \text{alors } n - 2 - 2n \ln x < 0 \text{ par conséquent, } f'_n(x)>0. \]
+
+\section*{Conclusion sur le signe de \( f'_n(x) \)}
+\begin{itemize}
+\item[-] \( \forall x\in \left] 0, e^{\frac{n - 2}{2n}}\right[  \) \( f'_n(x) > 0 \) donc $f_n(x)$ est croissant
+
+\item[-] \( \forall x\in  \left] e^{\frac{n - 2}{2n}}, +\infty \right[ \) \( f'_n(x) < 0 \) donc $f_n(x)$ est croissant.
+\end{itemize}
+
+\end{document}
