@@ -131,5 +131,29 @@ Le signe de \( f'_n(x) \), dépend du numérateur \( n - 2 - 2n \ln x \) car \( 
 \caption{Courbe de (Cf)}
 \label{fig:monimage}
 \end{figure}
+\section*{3. Étude du signe de \( f'_n(x) \)}
+\begin{enumerate}
+\item[(a)] Voir PDF
+\item[(b)] Calculons \( f_{n+1}(x)-f_{n}(x) \).
+Pour un entier naturel \( n \geq 2 \), la fonction \( f_n \) est définie par :
+\[ f_n(x) = \frac{1 + n \ln x}{x^2} \]
 
+La fonction \( f_{n+1}(x) \) est donc :
+\[ f_{n+1}(x) = \frac{1 + (n+1) \ln x}{x^2} \]
+
+Calculons \( f_{n+1}(x) - f_n(x) \) :
+\[ f_{n+1}(x) - f_n(x) = \frac{1 + (n+1) \ln x}{x^2} - \frac{1 + n \ln x}{x^2} \]
+
+Mettons les fractions sous un même dénominateur :
+\[ f_{n+1}(x) - f_n(x) = \frac{1 + (n+1) \ln x - (1 + n \ln x)}{x^2} \]
+
+Simplifions le numérateur :
+\[ 1 + (n+1) \ln x - 1 - n \ln x = (n+1) \ln x - n \ln x = \ln x \]
+
+Ainsi, nous avons :
+\[ f_{n+1}(x) - f_n(x) = \frac{\ln x}{x^2} \]
+
+Donc, la différence entre \( f_{n+1}(x) \) et \( f_n(x) \) est :
+\[ \textcolor{green}{\boxed{f_{n+1}(x) - f_n(x) = \frac{\ln x}{x^2}}} \]
+\end{enumerate}
 \end{document}
