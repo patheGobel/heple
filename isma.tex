@@ -74,6 +74,54 @@ Le signe de \( f'_n(x) \), dépend du numérateur \( n - 2 - 2n \ln x \) car \( 
 \item[-] \( \forall x\in \left] 0, e^{\frac{n - 2}{2n}}\right[  \) \( f'_n(x) > 0 \) donc $f_n(x)$ est croissant
 
 \item[-] \( \forall x\in  \left] e^{\frac{n - 2}{2n}}, +\infty \right[ \) \( f'_n(x) < 0 \) donc $f_n(x)$ est croissant.
-\end{itemize}
+\end{itemize} 
 
+\section*{Limites aux bornes de Df}
+
+\subsection*{En \( 0^+ \)}
+
+\begin{align*}
+\lim_{x \to 0^{+}}f_n(x)=\lim_{x \to 0^{+}}\frac{1 + n \ln x}{x^2}:
+\begin{cases}
+\lim_{x \to 0^{+}}1 + n \ln x=-\infty\\
+\lim_{x \to 0^{+}}x^2=0^{+}
+\end{cases}
+\text{ par quotient, }-\infty
+\end{align*}
+
+ \[\text{ Donc, } \textcolor{green}{\boxed{\lim_{x \to 0^+} f_n(x) = -\infty}}.\]
+
+\subsection*{En \(  +\infty \)}
+
+\begin{align*}
+\lim_{x \to +\infty }f_n(x)=\lim_{x \to +\infty }\frac{1 + n \ln x}{x^2}:
+\begin{cases}
+\lim_{x \to +\infty}1 + n \ln x=+\infty\\
+\lim_{x \to +\infty}x^2=+\infty
+\end{cases}
+\text{ par quotient, FI}\\
+\end{align*}
+\text{ Levons l'indétermination}
+\begin{align*}
+\lim_{x \to +\infty }\frac{1 + n \ln x}{x^2}=\lim_{x \to +\infty }\frac{1}{x^2}+\frac{ n \ln x}{x^2}=\lim_{x \to +\infty }n\frac{ 1}{x} \times \frac{ \ln x}{x}=0
+\end{align*}
+\[\text{ Donc, } \textcolor{green}{\boxed{\lim_{x \to +\infty} f_n(x) = 0}}.\]
+\section*{Résumé}
+
+\[
+\textcolor{green}{\boxed{\lim_{x \to 0^+} f_n(x) = -\infty}}
+\]
+
+\[
+\textcolor{green}{\boxed{\lim_{x \to +\infty} f_n(x) = 0}}
+\]
+
+\begin{tikzpicture}
+    % Initialisation du tableau
+    \tkzTabInit{$x$/1,$f_{n}'(x)$/1,$f_{n}(x)$/2}{$0$,$e^{\frac{n-2}{2n}}$,$+\infty$}
+    % Ligne des variations de f'
+    \tkzTabLine{,+,z,-,}
+    % Valeurs de f et points critiques
+    \tkzTabVar{-/$-\infty$,+/$\frac{n}{2e}e^{\frac{2}{n}}$,-/$0$}
+\end{tikzpicture}
 \end{document}
