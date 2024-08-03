@@ -124,16 +124,16 @@ Le signe de \( f'_n(x) \), dépend du numérateur \( n - 2 - 2n \ln x \) car \( 
     % Valeurs de f et points critiques
     \tkzTabVar{-/$-\infty$,+/$\frac{n}{2e}e^{\frac{2}{n}}$,-/$0$}
 \end{tikzpicture}
-
+\section*{3.}
+\begin{enumerate}
+\item[(a)] Voir PDF
+\\
 \begin{figure}[h]
 \centering
 \includegraphics[width=1.3\textwidth]{c2c3.png}
 \caption{Courbe de (Cf)}
 \label{fig:monimage}
 \end{figure}
-\section*{3. Étude du signe de \( f'_n(x) \)}
-\begin{enumerate}
-\item[(a)] Voir PDF
 \item[(b)] Calculons \( f_{n+1}(x)-f_{n}(x) \).
 Pour un entier naturel \( n \geq 2 \), la fonction \( f_n \) est définie par :
 \[ f_n(x) = \frac{1 + n \ln x}{x^2} \]
@@ -155,5 +155,55 @@ Ainsi, nous avons :
 
 Donc, la différence entre \( f_{n+1}(x) \) et \( f_n(x) \) est :
 \[ \textcolor{green}{\boxed{f_{n+1}(x) - f_n(x) = \frac{\ln x}{x^2}}} \]
+\item[(c)] \section*{Expliquons comment la courbe \(C_4\) est obtenue à partir de \(C_2\) et \(C_3\)}
+
+Pour obtenir la courbe \( C_4 \) à partir des courbes \( C_2 \) et \( C_3 \), nous devons comprendre la relation entre ces courbes et comment elles sont définies par la fonction \( f_n(x) = \frac{1 + n \ln x}{x^2} \).
+
+\subsection*{Relation entre \(C_2\), \(C_3\), et \(C_4\)}
+
+\subsubsection*{\underline{ Expression de } \( f_n(x) \)}
+La fonction \( f_n(x) \) est définie par :
+\[ f_n(x) = \frac{1 + n \ln x}{x^2} \]
+
+\subsubsection*{\underline{ Courbes \(C_2\) et \(C_3\)}}
+\begin{itemize}
+    \item[-] \( C_2 \) est la courbe de \( f_2(x) = \frac{1 + 2 \ln x}{x^2} \).
+    \item[-] \( C_3 \) est la courbe de \( f_3(x) = \frac{1 + 3 \ln x}{x^2} \).
+\end{itemize}
+
+\subsubsection*{\underline{ Courbe \(C_4\)}}
+\begin{itemize}
+    \item[-] \( C_4 \) sera la courbe de \( f_4(x) = \frac{1 + 4 \ln x}{x^2} \).
+\end{itemize}
+
+\subsection*{Méthode pour obtenir \(C_4\)}
+
+Pour obtenir \( C_4 \) à partir de \( C_2 \) et \( C_3 \), nous devons comprendre comment les termes supplémentaires \( 2 \ln x \) et \( 3 \ln x \) affectent la courbe. Ensuite, nous pouvons utiliser cette compréhension pour construire \( C_4 \).
+
+\subsubsection*{\underline{ Analyser les termes supplémentaires }}
+\begin{itemize}
+    \item[-] \( C_2 \) et \( C_3 \) diffèrent par un terme \(\frac{\ln x}{x^2}\).
+    \item[-] De même, \( C_4 \) diffèrera de \( C_3 \) par un terme \(\frac{\ln x}{x^2}\).
+\end{itemize}
+
+\subsubsection*{\underline{  Comprendre l'effet des termes supplémentaires }}
+\begin{itemize}
+    \item[-] La courbe \( C_4 \) peut être vue comme une transformation de \( C_3 \), ajoutant encore un terme \(\frac{\ln x}{x^2}\).
+\end{itemize}
+
+\subsubsection*{\underline{ Utiliser la différence }}
+\begin{itemize}
+    \item[-] Nous avons calculé précédemment que \( f_{n+1}(x) - f_n(x) = \frac{\ln x}{x^2} \).
+    \item[-] Pour obtenir \( C_4 \) à partir de \( C_2 \) et \( C_3 \), on peut superposer \( C_3 \) sur \( C_2 \) et ajouter le terme supplémentaire \(\frac{\ln x}{x^2}\) à chaque point de \( C_3 \).
+\end{itemize}
+
 \end{enumerate}
+\subsubsection*{\underline{Utiliser la différence :}}
+
+\begin{itemize}
+\item[-] Nous avons calculé précédemment que \( f_{n+1}(x) - f_n(x) = \frac{\ln x}{x^2} \).
+   
+\item[-] Pour obtenir \( C_4 \) à partir de \( C_2 \) et \( C_3 \), on peut superposer \( C_3 \) sur \( C_2 \) et ajouter le terme supplémentaire \(\frac{\ln x}{x^2}\) à chaque point de \( C_3 \).
+\end{itemize}
+
 \end{document}
