@@ -244,7 +244,35 @@ Ainsi, $A_n$ est une suite arithmétique de raison $-\frac{2+e}{e}$ et de premie
 \end{itemize}
 \section*{5. Dans la suite, on considère que $n\geq 3$.}
 \begin{itemize}
-\item[(a)] Montrer que $ e^{\frac{n-2}{2n}} > 0 $ et $f_{n}(e^{\frac{n-2}{2n}}) > 0$.
-\item[(b)] En déduire que l'équation $f_{n}(x)=1$ n'admet pas de solution sur l'intervalle $]1,e^{\frac{n-2}{2n}}[$
+\item[(a)] Montrons que $ e^{\frac{n-2}{2n}} > 1 $ et $f_{n}(e^{\frac{n-2}{2n}}) > 1$.
+
+Si $n\geq 3$ alors $\frac{n-2}{2n}>0$
+
+donc $ e^{\frac{n-2}{2n}} > e^{0} $
+
+D'où $ e^{\frac{n-2}{2n}} > 1 $
+
+$f_n(e^{\frac{n-2}{2n}}) = \frac{1 + n \ln \left( e^{\frac{n-2}{2n}}\right)}{\left( e^{\frac{n-2}{2n}}\right) ^2}$
+
+$f_n(e^{\frac{n-2}{2n}}) = \frac{1 + n\frac{n-2}{2n}}{e^{\frac{n-2}{n}}}$
+
+$f_n(e^{\frac{n-2}{2n}}) = \frac{1 + \frac{n-2}{2}}{e^{\frac{n-2}{n}}}$
+
+$f_n(e^{\frac{n-2}{2n}}) = \frac{\frac{n}{2}}{e^{\frac{n-2}{n}}}$
+
+Comme $n\geq 3$ donc $\frac{n}{2}>1$ d'autre part $e^{\frac{n-2}{n}}>1\implies \frac{1}{e^{\frac{n-2}{n}}}>1$ 
+\[
+\underline{
+\begin{cases}
+\frac{n}{2}>1\\
+\frac{1}{e^{\frac{n-2}{n}}}>1
+\end{cases}}
+\text{Par produit,}
+\]
+
+\[
+\frac{\frac{n}{2}}{e^{\frac{n-2}{n}}}>1 \text{ donc } f_n(e^{\frac{n-2}{2n}})>1
+\]
+%\item[(b)] En déduire que l'équation $f_{n}(x)=1$ n'admet pas de solution sur l'intervalle $]1,e^{\frac{n-2}{2n}}[$
 \end{itemize}
 \end{document}
