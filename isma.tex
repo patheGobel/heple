@@ -198,5 +198,40 @@ Pour obtenir \( C_4 \) à partir de \( C_2 \) et \( C_3 \), nous devons comprend
 \end{itemize}
 
 \end{enumerate}
+\section*{4. On considère la suite de terme général $A_{n}=\int_{1}^{e}f_{n}(x)dx$}
+\begin{itemize}
+\item[(a)] Calculons $A_{n}$ Par intégration par parties et interprétons géométriquement.
 
+Considérons la suite de terme général \( A_n = \int_{1}^{e} f_n(x) \, dx \) avec \( f_n(x) = \frac{1 + n \ln x}{x^2} \).
+
+Intégration par parties :
+
+Posons 
+\[ u = 1 + n \ln x \implies u' = \frac{n}{x} \]
+
+Nous avons 
+\[ v' = \frac{1}{x^2} \implies v = -\frac{1}{x} \]
+
+L'intégration par parties donne :
+\[ \int u \, v' = uv - \int v \, u' \]
+
+Appliquons cette méthode à \( A_n \) :
+\begin{align*}
+A_n &=  -\frac{1 + n \ln x}{x}+\int_{1}^{e}\frac{n}{x^{2}}\\
+&=-\left[ \frac{1 + n \ln x}{x}\right]_{1}^{e} -\left[ \frac{n}{x}\right] _{1}^{e}\\
+&=-\left( \frac{1 + n \ln e}{e}-\frac{1 + n \ln 1}{1}\right) -\left( \frac{n}{e}-\frac{n}{1}\right)\\
+&=-\left( \frac{1 + n-e}{e}\right) -\left( \frac{n-ne}{e}\right)\\
+&=\frac{-1 - n+e}{e} + \frac{-n+ne}{e}\\
+&=\frac{-1 - 2n+e+ne}{e}\\
+\end{align*}
+\[\textcolor{green}{\boxed{A_n=\frac{-1+e-n(2+e)}{e}}}\]
+
+
+
+\end{itemize}
+\section*{5. Dans la suite, on considère que $n\geq 3$.}
+\begin{itemize}
+\item[(a)] Montrer que $ e^{\frac{n-2}{2n}} > 0 $ et $f_{n}(e^{\frac{n-2}{2n}}) > 0$.
+\item[(b)] En déduire que l'équation $f_{n}(x)=1$ n'admet pas de solution sur l'intervalle $]1,e^{\frac{n-2}{2n}}[$
+\end{itemize}
 \end{document}
