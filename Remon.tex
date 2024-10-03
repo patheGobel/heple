@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section*{Calcul des cas positifs durant les premiers mois de la pandémie}
+
+Lors de la première vague de la pandémie de COVID-19, 400 cas positifs ont été décomptés durant le premier mois. Chaque mois, le nombre de cas augmente de 5\%. On note \( U_{n} \) le nombre de cas positifs décomptés durant le \( n \)-ième mois de la pandémie.
+
+\subsection*{Formule de progression géométrique}
+La formule générale pour une progression géométrique est :
+\[
+U_{n+1} = U_n \times (1 + r)
+\]
+où \( r \) est le taux d'augmentation.
+
+\subsection*{Calculs}
+\begin{itemize}
+    \item Données initiales :
+    \[
+    U_1 = 400
+    \]
+    \item Taux d'augmentation mensuel :
+    \[
+    r = 0.05
+    \]
+\end{itemize}
+
+\subsubsection*{Pour \( U_2 \) (deuxième mois)}
+\[
+U_2 = U_1 \times (1 + r)
+\]
+\[
+U_2 = 400 \times 1.05
+\]
+\[
+U_2 = 420
+\]
+
+\subsubsection*{Pour \( U_3 \) (troisième mois)}
+\[
+U_3 = U_2 \times (1 + r)
+\]
+\[
+U_3 = 420 \times 1.05
+\]
+\[
+U_3 = 441
+\]
+
+\subsection*{Résultats}
+Ainsi, les nombres de cas positifs décomptés durant les premiers mois de la pandémie sont :
+\begin{itemize}
+    \item Premier mois (\( U_1 \)) : 400 cas
+    \item Deuxième mois (\( U_2 \)) : 420 cas
+    \item Troisième mois (\( U_3 \)) : 441 cas
+\end{itemize}
+
+\end{document}

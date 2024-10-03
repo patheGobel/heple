@@ -1,0 +1,116 @@
+\documentclass[12pt]{article}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+
+\usepackage{color, soul}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tkz-tab}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes.geometric, fit}
+
+\usepackage[margin=2cm]{geometry}
+
+\begin{document}
+
+\begin{minipage}{0.8\textwidth}
+    Kadidiatou                          
+\end{minipage}
+\begin{minipage}{0.8\textwidth}
+   DIALLO                          
+\end{minipage}
+\section*{Exercice 1 (06 points)}
+\textbf{NB : Les résultats en cm seront donnés à $10^{-2}$ près.}
+
+Un forgeron tape sur une pièce métallique d'épaisseur 1 cm. À chaque coup, l'épaisseur du métal diminue de 1 \%.
+
+On suppose que le temps entre deux coups consécutifs est de 6 secondes.
+
+On désigne par $U_0$ l'épaisseur initiale et par $U_n$ l'épaisseur après $n$ coups (n un entier naturel).
+
+\textbf{Formule :}
+
+La relation de récurrence pour $U_n$ est :
+
+\[ U_{n+1} = U_n \times 0.99 \]
+
+La formule générale pour $U_n$, l'épaisseur après $n$ coups, est donc :
+
+\[ U_n = U_0 \times (0.99)^n \]
+
+\begin{enumerate}
+    \item 
+    \begin{enumerate}
+        \item Calculer $U_1$, $U_2$ et $U_3$:
+        \[
+        U_1 = U_0 \times (1 - 0.01) = 1 \times 0.99 = 0.99 \text{ cm}
+        \]
+        \[
+        U_2 = U_1 \times (1 - 0.01) = 0.99 \times 0.99 = 0.9801 \text{ cm}
+        \]
+        \[
+        U_3 = U_2 \times (1 - 0.01) = 0.9801 \times 0.99 = 0.970299 \text{ cm}
+        \]
+        \item Établir une relation entre $U_{n+1}$ et $U_n$:
+        \[
+        U_{n+1} = U_n \times 0.99
+        \]
+        En déduire la nature de la suite $(U_n)$:
+        \\
+        La suite $(U_n)$ est une suite géométrique de raison $r = 0.99$.
+    \end{enumerate}
+
+    \item 
+    \begin{enumerate}
+        \item Exprimer $U_n$ en fonction de $n$:
+        \[
+        U_n = U_0 \times (0.99)^n
+        \]
+        \[
+        U_n = 1 \times (0.99)^n = (0.99)^n
+        \]
+        \item En déduire l'épaisseur de la pièce juste avant le 11ème coup:
+        \[
+        U_{10} = (0.99)^{10} \approx 0.9044 \text{ cm}
+        \]
+    \end{enumerate}
+
+    \item 
+    On considère la pièce finie lorsque son épaisseur est inférieure ou égale à 0.25 cm.
+    \begin{enumerate}
+        \item Combien de coups seront-ils nécessaires pour terminer la pièce?
+        \[
+        (0.99)^n \leq 0.25
+        \]
+        En prenant le logarithme des deux côtés:
+        \[
+        n \log(0.99) \leq \log(0.25)
+        \]
+        \[
+        n \geq \frac{\log(0.25)}{\log(0.99)} \approx \frac{-0.6021}{-0.0043} \approx 140
+        \]
+
+        \item Quel est le temps minimal nécessaire pour terminer la pièce?
+        \[
+        T = n \times 6 \text{ secondes}
+        \]
+        \[
+        T = 140 \times 6 \approx 840 \text{ secondes}
+        \]
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}
