@@ -99,5 +99,72 @@ Cette expression signifie que, pour tout $\epsilon$ positif, il existe un réel 
 
 2. \text{Utiliser un encadrement pour déterminer la limite en } $+\infty$ \text{ de la fonction } f \text{ définie par }\\
 \[f(x) = \frac{\mathrm{E}(x)}{x}\]
+\section*{\textcolor{green}{\underline{Correction Exercice 2}:}}
+
+1. \textbf{En utilisant la définition, montrer que}
+\[
+\lim_{x \to 5} \sqrt{x} = \sqrt{5}.
+\]
+\textbf{Solution} : Utilisons la définition formelle de la limite. Nous devons montrer que :
+\[
+\forall \epsilon > 0, \exists \delta > 0, \text{ tel que } 0 < |x - 5| < \delta \implies |\sqrt{x} - \sqrt{5}| < \epsilon.
+\]
+En d'autres termes, pour tout \( \epsilon > 0 \), il existe un \( \delta > 0 \) tel que si \( x \) est suffisamment proche de 5 (c'est-à-dire que \( |x - 5| < \delta \)), alors \( \sqrt{x} \) est proche de \( \sqrt{5} \) (c'est-à-dire que \( |\sqrt{x} - \sqrt{5}| < \epsilon \)).
+
+Pour déterminer \( \delta \), on commence par manipuler l'inégalité \( |\sqrt{x} - \sqrt{5}| < \epsilon \) :
+
+\[
+|\sqrt{x} - \sqrt{5}| = \frac{|x - 5|}{\sqrt{x} + \sqrt{5}}.
+\]
+
+On cherche donc \( \delta \) tel que :
+\[
+\frac{|x - 5|}{\sqrt{x} + \sqrt{5}} < \epsilon.
+\]
+
+Puisque \( \sqrt{x} \) est proche de \( \sqrt{5} \) lorsque \( x \to 5 \), on peut majorer \( \sqrt{x} + \sqrt{5} \) par une constante, et ainsi choisir \( \delta \) en fonction de \( \epsilon \).
+
+2. \textbf{Utiliser un encadrement pour déterminer la limite en } $+\infty$ \textbf{ de la fonction } f \textbf{ définie par } $f(x) = \frac{E(x)}{x}$.
+
+\textbf{Solution} : Si \( E(x) \) désigne la partie entière de \( x \), on peut encadrer \( f(x) \) de la manière suivante :
+\[
+\frac{x-1}{x} \leq \frac{E(x)}{x} \leq \frac{x}{x} = 1.
+\]
+
+Ainsi, on a l'encadrement :
+\[
+1 - \frac{1}{x} \leq f(x) \leq 1.
+\]
+
+En passant à la limite lorsque \(x \to +\infty\), on obtient :
+\[
+\lim_{x \to +\infty} \left( 1 - \frac{1}{x} \right) = 1 \quad \text{et} \quad \lim_{x \to +\infty} 1 = 1.
+\]
+
+Par le théorème des gendarmes, on en déduit que :
+\[
+\lim_{x \to +\infty} f(x) = 1.
+\]
+
+\section*{Exercice 3}
+
+1. \text{Quand dit-on qu'une fonction } \( f \) \text{ est minorée sur un intervalle } \( I \)\text{ ?}
+
+2. \text{Quand dit-on qu'une fonction } \( f \)  est continue sur un intervalle
+
+du type  \([a, b]\) \text{ avec } \(a, b \in \mathbb{R}\) \text{ ?}
+
+3. \text{Donner la proposition exprimant la propriété appelée "Inégalité des accroissements finis".}
+
+4. \text{Donner la proposition exprimant la propriété appelée "Règle de l'Hospital".}
+
+5. \text{Justifier que } \[ \lim_{{x \to 0}} \frac{e^{x}-1}{\sin x} = 1 \]
+
+6. \text{Montrer que si } \( f \) \text{ et } \( g \) \text{ sont deux fonctions croissantes, alors la fonction } \( f + g \)\\ \text{ est une fonction croissante.}
+
+7.\text{Peut-on prolonger par continuité en } \( x_0 = 1\) \text{ la fonction définie par ?}
+ \(f(x) = \frac{x^2 - 1}{x^3 - 1}\)
+ 
+ \text{ Justifier.}
 
 \end{document}
