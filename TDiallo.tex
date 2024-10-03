@@ -1,0 +1,132 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{array}
+\begin{document}
+
+\section*{Exercice}
+
+Voici la répartition des salaires annuels (en milliers d'euros) dans une entreprise.
+
+\begin{tabular}{|c|c|c|c|c|c|}
+  \hline
+  \textbf{Salaire} & [10;20] & [20;30] & [30;40] & [40;50] & [50;60]\\
+  \hline
+    \textbf{Effectif}& 100 & 60 & 20 & 10 & 10\\
+  \hline
+\end{tabular}
+
+\begin{enumerate}
+  \item[a)] Déterminer le salaire moyen.
+  \item[b)] Déterminer un salaire médian.
+\end{enumerate}
+
+\section*{Exercice}
+
+Voici la répartition des salaires annuels (en milliers d'euros) dans une entreprise.
+
+\begin{tabular}{|c|c|c|c|c|c|}
+  \hline
+  \textbf{Salaire} & [10;20] & [20;30] & [30;40] & [40;50] & [50;60]\\
+  \hline
+  \textbf{Effectif} & 100 & 60 & 20 & 10 & 10\\
+  \hline
+\end{tabular}
+
+\begin{enumerate}
+  \item[a)] Déterminer le salaire moyen.
+
+  Pour déterminer le salaire moyen, nous suivons les étapes suivantes :
+
+  \begin{enumerate}
+    \item \textbf{Calcul des salaires moyens pour chaque intervalle} :
+    \begin{itemize}
+      \item Pour l'intervalle \([10;20]\) : \(m_1 = \frac{10 + 20}{2} = 15\)
+      \item Pour l'intervalle \([20;30]\) : \(m_2 = \frac{20 + 30}{2} = 25\)
+      \item Pour l'intervalle \([30;40]\) : \(m_3 = \frac{30 + 40}{2} = 35\)
+      \item Pour l'intervalle \([40;50]\) : \(m_4 = \frac{40 + 50}{2} = 45\)
+      \item Pour l'intervalle \([50;60]\) : \(m_5 = \frac{50 + 60}{2} = 55\)
+    \end{itemize}
+
+    \item \textbf{Calcul de la somme des salaires pondérée par l'effectif} :
+    \[
+    \text{Somme des salaires} = 100 \times 15 + 60 \times 25 + 20 \times 35 + 10 \times 45 + 10 \times 55
+    \]
+    \[
+    = 1500 + 1500 + 700 + 450 + 550 = 4200
+    \]
+
+    \item \textbf{Calcul de l'effectif total} :
+    \[
+    \text{Effectif total} = 100 + 60 + 20 + 10 + 10 = 200
+    \]
+
+    \item \textbf{Calcul du salaire moyen} :
+    \[
+    \text{Salaire moyen} = \frac{\text{Somme des salaires}}{\text{Effectif total}} = \frac{4200}{200} = 21
+    \]
+  \end{enumerate}
+
+  Donc, le salaire moyen dans l'entreprise est de \textbf{21 000 euros}.
+  
+\end{enumerate}
+\begin{enumerate}
+
+  \item[b)] Déterminons un salaire médian.
+
+  Pour déterminer le salaire médian, nous suivons les étapes suivantes :
+
+  \begin{enumerate}
+    \item \textbf{Déterminer l'effectif total} : 
+    L'effectif total est \(200\).
+
+    \item \textbf{Trouver la classe médiane} :
+    La classe médiane est celle qui contient la moitié de l'effectif total, soit \(100\). Voici le tableau avec l'effectif cumulé :
+
+    \[
+    \begin{array}{|c|c|c|}
+    \hline
+    \textbf{Salaire} & \textbf{Effectif} & \textbf{Effectif Cumulé} \\
+    \hline
+    [10;20] & 100 & 100 \\
+    \hline
+    [20;30] & 60 & 160 \\
+    \hline
+    [30;40] & 20 & 180 \\
+    \hline
+    [40;50] & 10 & 190 \\
+    \hline
+    [50;60] & 10 & 200 \\
+    \hline
+    \end{array}
+    \]
+
+    Ainsi, la classe médiane est \([10;20]\).
+
+    \item \textbf{Calculer le salaire médian} :
+    \[
+    \text{Médiane} = L + \left( \frac{\frac{N}{2} - F}{f} \right) \times h
+    \]
+
+    où :
+    \begin{itemize}
+      \item \(L\) = limite inférieure de la classe médiane (10)
+      \item \(N\) = effectif total (200)
+      \item \(F\) = effectif cumulé avant la classe médiane (0)
+      \item \(f\) = effectif de la classe médiane (100)
+      \item \(h\) = amplitude de la classe (20 - 10 = 10)
+    \end{itemize}
+
+    Substituons les valeurs :
+
+    \[
+    \text{Médiane} = 10 + \left( \frac{100 - 0}{100} \right) \times 10
+    \]
+    \[
+    = 10 + (1) \times 10 = 20
+    \]
+
+    Donc, le salaire médian est de \textbf{20 000 euros}.
+  \end{enumerate}
+\end{enumerate}
+
+\end{document}
