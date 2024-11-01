@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{stmaryrd}
+\usepackage{graphicx} % Pour l'insertion d'images
+\usepackage{float}    % Pour contrôler précisément le placement
+\usepackage[utf8]{inputenc}
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+
+\usepackage{color, soul}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tkz-tab}
+\begin{document}
+
+\[
+\text{ Soit \( f \) la fonction définie par: } 
+f(x)=
+\begin{cases}
+-x+\sqrt{x^{2}+4} \text{ Si } x<0\\
+\sqrt{|4-x^{2}|} \text{ Si } x\geq 0
+\end{cases}
+\]
+
+---------------------------------------------
+
+\begin{tikzpicture}
+   \tkzTabInit[color, colorC = blue!15, colorL = green!15]
+              {$x$ / 1 , $4-x^{2}$ / 1}{$-\infty$, $-2$, $0$, $2$, $+\infty$}
+   \tkzTabLine{,h, d, h, z, +,z,- }
+\end{tikzpicture}
+
+------------------------------------------
+
+Posons \( 4-x^{2} = 0  \)
+
+\( 4-x^{2} = 0  \implies x=2 \text{ ou } x=-2\)
+
+\begin{tikzpicture}
+   \tkzTabInit[color, colorC = blue!15, colorL = green!15]
+              {$x$ / 1 , $4 - x^{2}$ / 1, $|4 - x^{2}|$ / 1}{$-\infty$, $-2$, $0$, $2$, $+\infty$}
+   \tkzTabLine{,h, d, h, z, +,z,- } % Ligne pour $4 - x^2$
+   \tkzTabLine{,h, d, h, z,4 - x^2, z, - (4 - x^2)} % Ligne pour $|4 - x^2|
+\end{tikzpicture}
+
+\[ 
+f(x)=
+\begin{cases}
+-x+\sqrt{x^{2}+4} \text{ Si } x<0\\
+\sqrt{4-x^{2}} \text{ Si } x\in [0 ; 2[\\
+\sqrt{-4+x^{2}} \text{ Si } x\geq 2
+\end{cases}
+\]
+\end{document}
