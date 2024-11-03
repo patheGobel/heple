@@ -1,0 +1,82 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{graphicx}
+\usepackage[a4paper, top=0cm, bottom=2cm, left=2cm, right=2cm]{geometry} % Ajuste les marges
+\usepackage{xcolor} % Pour ajouter des couleurs
+\usepackage{hyperref} % Pour avoir des références colorées si nécessaire
+\usepackage{eso-pic}         % Pour ajouter des éléments en arrière-plan
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tkz-tab}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes.geometric, fit}
+\newcounter{correction} % Compteur pour les questions
+
+% Définir la commande pour afficher une question numérotée
+\newcommand{\question}{%
+  \refstepcounter{correction}%
+  \textbf{\textcolor{black}{Question \thecorrection (1 point) :}} \ignorespaces
+}
+
+\begin{document}
+
+% En-tête
+\begin{center}
+    \begin{tabular}{@{} p{5cm} p{5cm} p{5cm} @{}} % 3 colonnes avec largeurs fixées
+        Lycée Maciré BA & Test 2 & 25 Octobre 2024 \\
+    \end{tabular}
+    \\[-0.01cm] % Ajuster l'espace vertical entre le tableau et la barre
+    \hrule % Barre horizontale
+\end{center}
+\begin{center}
+    \textbf{\Large Asymptotes et Branches Infinies} \\[0.2cm]
+    \textbf{\large Professeur : M. DIOP} \\[0.2cm]
+    \textbf{Classe : Terminale S2} \\[0.2cm]
+    \textbf{\small Durée : 10 minutes} \\[0.2cm]
+    \textbf{\small Note :\quad\quad /5}
+\end{center}
+
+% Nom de l'élève
+\textbf{\small Nom de l'élève :} \underline{\hspace{8cm}} \\[0.5cm]
+
+% Introduction aux questions
+Complétez les exercices suivants en utilisant le cours et vos connaissances sur les asymptotes. \\[0.3cm]
+
+\question
+On dit que la droite d'équation \( y = d \) est une asymptote horizontale à la courbe représentative de \( h \) si :
+
+\[
+\lim_{x \to +\infty} h(x) = \underline{\hspace{2cm}}, \quad \lim_{x \to -\infty} h(x) = \underline{\hspace{2cm}}
+\]
+
+\question\
+Complétez la phrase suivante : La droite d'équation \( x = c \) est une asymptote verticale à la courbe représentative de \( h \) si \underline{\hspace{15cm}}\\[0.3cm]
+\underline{\hspace{20cm}}
+
+\question\\
+Soit \( h(x) = \frac{3x + 1}{x - 2} \). \\
+Déterminez les limites de \( h(x) \) en \( x \to +\infty \), \( x \to -\infty \) et \( x \to 2 \) :
+\[
+\lim_{x \to +\infty} h(x) = \underline{\hspace{2cm}}, \quad \lim_{x \to -\infty} h(x) = \underline{\hspace{2cm}}, \quad \lim_{x \to 2^-} h(x) = \underline{\hspace{2cm}}, \quad 
+\]
+\[\lim_{x \to 2^+} h(x) = \underline{\hspace{2cm}}.\]
+
+\question\\
+Montrez que la droite \( y = 3x - 1 \) est une asymptote oblique de la fonction \( h(x) = \frac{3x^2 + 2x}{x+1} \) en \( +\infty \). \\[0.2cm]
+\underline{\hspace{20cm}}\\[0.3cm]
+\underline{\hspace{20cm}}\\[0.3cm]
+\underline{\hspace{20cm}}\\[0.3cm]
+\underline{\hspace{20cm}}\\[0.3cm]
+\underline{\hspace{20cm}}\\[0.3cm]
+
+\question\\
+\[\text{Si}\lim_{x \to -\infty} h(x) =-\infty \text{ et }\lim_{x \to -\infty}\frac{h(x)}{x}= +\infty\text{ alors } (C_{h}) \underline{\hspace{10cm}}\]\\
+\underline{\hspace{20cm}}\\[0.3cm]
+\[\text{Si}\lim_{x \to +\infty} h(x) =+\infty \text{ et }\lim_{x \to +\infty}\frac{h(x)}{x}=\gamma \in\mathbb{R}^{*}\text{ et }\lim_{x \to +\infty}[h(x)-\gamma x]=+\infty\text{ alors } \underline{\hspace{10cm}}\]\\
+\underline{\hspace{20cm}}\\[0.3cm]
+\end{document}

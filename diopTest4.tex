@@ -1,0 +1,72 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{graphicx}
+\usepackage[a4paper, top=0cm, bottom=2cm, left=2cm, right=2cm]{geometry} % Ajuste les marges
+\usepackage{xcolor} % Pour ajouter des couleurs
+\usepackage{hyperref} % Pour avoir des références colorées si nécessaire
+\usepackage{eso-pic}         % Pour ajouter des éléments en arrière-plan
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tkz-tab}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes.geometric, fit}
+\newcounter{correction} % Compteur pour les questions
+
+% Définir la commande pour afficher une question numérotée
+\newcommand{\question}{%
+  \refstepcounter{correction}%
+  \textbf{\textcolor{black}{Question \thecorrection (1 point) :}} \ignorespaces
+}
+
+\begin{document}
+\hrule % Barre horizontale
+% En-tête
+\begin{center}
+    \begin{tabular}{@{} p{5cm} p{5cm} p{5cm} @{}} % 3 colonnes avec largeurs fixées
+        Lycée Maciré BA & Test 4 & 04 Octobre 2024 \\
+    \end{tabular}
+    \\[-0.01cm] % Ajuster l'espace vertical entre le tableau et la barre
+    \hrule % Barre horizontale
+\end{center}
+\begin{center}
+    \textbf{\Large Limites et Continuité} \\[0.2cm]
+    \textbf{\large Professeur : M. DIOP} \\[0.2cm]
+    \textbf{Classe : Terminale S2} \\[0.2cm]
+    \textbf{\small Durée : 10 minutes} \\[0.2cm]
+    \textbf{\small Note :\quad\quad /5}
+\end{center}
+
+% Nom de l'élève
+\textbf{\small Nom de l'élève :} \underline{\hspace{8cm}} \\[0.5cm]
+
+% Introduction aux questions
+Complétez les exercices suivants en utilisant le cours et vos connaissances sur la continuité des fonctions. \\[0.3cm]
+
+\question Enoncer le théorème des valeurs intermediaries.\\
+\underline{\hspace{20cm}}\\
+\underline{\hspace{20cm}}\\
+\underline{\hspace{20cm}}\\
+\question Enoncer le théorème d’existence et d’unicité d’une solution\\
+\underline{\hspace{20cm}}\\
+\underline{\hspace{20cm}}\\
+\underline{\hspace{20cm}}\\
+\question\
+Complétez la phrase suivante : Une fonction est dite continue sur un intervalle \( I \) si elle est continue \underline{\hspace{15cm}}. \\[0.3cm]
+\underline{\hspace{20cm}}
+
+\question\\
+\[\text{Si}\lim_{x \to -\infty} h(x) =-\infty \text{ et }\lim_{x \to -\infty}\frac{h(x)}{x}= 0\text{ alors } (C_{h}) \underline{\hspace{10cm}}\]\\
+\underline{\hspace{20cm}}\\[0.3cm]
+\[\text{Si}\lim_{x \to +\infty} h(x) =+\infty \text{ et }\lim_{x \to +\infty}\frac{h(x)}{x}=\gamma \in\mathbb{R}^{*}\text{ et }\lim_{x \to +\infty}[h(x)-\gamma x]=+\infty\text{ alors } \underline{\hspace{10cm}}\]\\
+\underline{\hspace{20cm}}\\[0.3cm]
+\question\\
+Soit \( f(x) =\frac{2x+1}{x-1} \) une fonction continue décroissante sur \( \mathbb{R}\setminus\{1\} \) déterminer:\\
+\( f([-2; 0])=\underline{\hspace{15cm}} \)\\
+\( f(]1; +\infty[)=\underline{\hspace{15cm}} \)
+
+\end{document}

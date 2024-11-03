@@ -1,0 +1,89 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{graphicx}
+\usepackage[a4paper, top=0cm, bottom=2cm, left=2cm, right=2cm]{geometry} % Ajuste les marges
+\usepackage{xcolor} % Pour ajouter des couleurs
+\usepackage{hyperref} % Pour avoir des références colorées si nécessaire
+\usepackage{eso-pic}         % Pour ajouter des éléments en arrière-plan
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tkz-tab}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes.geometric, fit}
+\newcounter{correction} % Compteur pour les questions
+
+% Définir une nouvelle couleur
+\definecolor{myorange}{RGB}{255,165,0}
+
+% Définir la commande pour afficher une question numérotée
+\newcommand{\question}{%
+  \refstepcounter{correction}%
+  \textbf{\textcolor{black}{Question \thecorrection (1 point) :}} \ignorespaces
+}
+% Commande pour ajouter du texte en arrière-plan
+\AddToShipoutPicture{
+    \AtTextCenter{%
+        \makebox[0pt]{\rotatebox{80}{\textcolor[gray]{0.9}{\fontsize{10cm}{10cm}\selectfont M. DIOP}}}
+    }
+}
+\begin{document}
+
+% En-tête
+\begin{center}
+    \begin{tabular}{@{} p{5cm} p{5cm} p{5cm} @{}} % 3 colonnes avec largeurs fixées
+        Lycée De Maciré BA & Évaluation 1 & 24 Octobre 2024 \\
+    \end{tabular}
+    \\[-0.01cm] % Ajuster l'espace vertical entre le tableau et la barre
+    \hrule % Barre horizontale
+\end{center}
+\begin{center}
+    \textbf{\Large Évaluation 1 : Asymptotes et branches infinies} \\[0.2cm]
+    \textbf{\large Professeur : M. DIOP} \\[0.2cm]
+    \textbf{Classe : Terminale S2} \\[0.2cm]
+    \textbf{\small Durée : 5 minutes} \\[0.2cm]
+    \textbf{\small Note : \quad \quad /5}
+\end{center}
+
+% Nom de l'élève
+\textbf{\small Nom de l'élève :} \underline{\hspace{8cm}} \\[0.5cm]
+
+% Introduction aux questions
+Complétez les questions suivantes en vous aidant du cours. \\[0.3cm]
+
+
+\question\\
+On dit que la droite d'équation \( y = b \) est une asymptote horizontale à la courbe représentative de \( f \) si et seulement si :
+
+\[
+\lim_{x \to +\infty} f(x) = \underline{\hspace{2cm}}, \quad \lim_{x \to -\infty} f(x) = \underline{\hspace{2cm}}
+\]
+
+\question\\
+Complétez la phrase suivante : La droite d'équation \( x = a \) est une asymptote verticale à la courbe représentative de \( f \) si \underline{\hspace{15cm}}\\[0.3cm]
+\underline{\hspace{20cm}}\\[0.3cm]
+\question\\
+Soit \( f(x) = \frac{x-2}{x-3} \). \\
+Déterminez les limites de \( f(x) \) en \( x \to +\infty \), \( x \to -\infty \) et \( x \to 3 \) :
+\[
+\lim_{x \to +\infty} f(x) = \underline{\hspace{2cm}}, \quad \lim_{x \to -\infty} f(x) = \underline{\hspace{2cm}}, \quad \lim_{x \to 3^-} f(x) = \underline{\hspace{2cm}}, \quad 
+\]
+\[\lim_{x \to 3^+} f(x) = \underline{\hspace{2cm}}.\]
+
+\question\\
+Montrez que la droite \( y = x + 1 \) est une asymptote oblique de la fonction \( f(x) = \frac{x^2 - 1}{x-1} \) en \( +\infty \). \\[0.2cm]
+\underline{\hspace{20cm}}\\[0.3cm]
+\underline{\hspace{20cm}}\\[0.3cm]
+\underline{\hspace{20cm}}\\[0.3cm]
+\underline{\hspace{20cm}}\\[0.3cm]
+\underline{\hspace{20cm}}\\[0.3cm]
+\question\\
+\[\text{Si}\lim_{x \to +\infty} f(x) =-\infty \text{ et }\lim_{x \to +\infty}\frac{f(x)}{x}= \underline{\hspace{1cm}}\text{ alors } (C_{f}) \underline{\hspace{10cm}}\]\\
+\underline{\hspace{20cm}}\\[0.3cm]
+\[\text{Si}\lim_{x \to +\infty} f(x) =+\infty \text{ et }\lim_{x \to +\infty}\frac{f(x)}{x}=\beta \in\mathbb{R}^{*}\text{ et }\lim_{x \to +\infty}[f(x)-\beta x]=+\infty\text{ alors } \underline{\hspace{10cm}}\]\\
+\underline{\hspace{20cm}}\\[0.3cm]
+\end{document}

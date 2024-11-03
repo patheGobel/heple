@@ -1,0 +1,80 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{graphicx}
+\usepackage[a4paper, top=0cm, bottom=2cm, left=2cm, right=2cm]{geometry} % Ajuste les marges
+\usepackage{xcolor} % Pour ajouter des couleurs
+\usepackage{hyperref} % Pour avoir des références colorées si nécessaire
+\usepackage{eso-pic}         % Pour ajouter des éléments en arrière-plan
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tkz-tab}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes.geometric, fit}
+\newcounter{correction} % Compteur pour les questions
+
+% Définir la commande pour afficher une question numérotée
+\newcommand{\question}{%
+  \refstepcounter{correction}%
+  \textbf{\textcolor{black}{Question \thecorrection (1 point) :}} \ignorespaces
+}
+
+\begin{document}
+\hrule % Barre horizontale
+% En-tête
+\begin{center}
+    \begin{tabular}{@{} p{5cm} p{5cm} p{5cm} @{}} % 3 colonnes avec largeurs fixées
+        Lycée Maciré BA & Test 3 & 28 Octobre 2024 \\
+    \end{tabular}
+    \\[-0.01cm] % Ajuster l'espace vertical entre le tableau et la barre
+    \hrule % Barre horizontale
+\end{center}
+\begin{center}
+    \textbf{\Large Limites et Continuité} \\[0.2cm]
+    \textbf{\large Professeur : M. DIOP} \\[0.2cm]
+    \textbf{Classe : Terminale S2} \\[0.2cm]
+    \textbf{\small Durée : 10 minutes} \\[0.2cm]
+    \textbf{\small Note :\quad\quad /5}
+\end{center}
+
+% Nom de l'élève
+\textbf{\small Nom de l'élève :} \underline{\hspace{8cm}} \\[0.5cm]
+
+% Introduction aux questions
+Complétez les exercices suivants en utilisant le cours et vos connaissances sur la continuité des fonctions. \\[0.3cm]
+
+\question
+\[\text{ Pour calculer la limite \( \lim_{x \to a} g(f(x)) \), il faut d'abord déterminer \( \lim_{x \to a} f(x) = \dots \) puis, en utilisant cette}\]
+
+\[\text{  valeur, calculer \( \lim_{y \to \dots} g(y) \).}\]
+
+\question\
+Complétez la phrase suivante : Une fonction est dite continue sur un intervalle \( I \) si elle est continue \underline{\hspace{15cm}}. \\[0.3cm]
+\underline{\hspace{20cm}}
+
+\question\\
+\[\text{Si}\lim_{x \to -\infty} h(x) =-\infty \text{ et }\lim_{x \to -\infty}\frac{h(x)}{x}= +\infty\text{ alors } (C_{h}) \underline{\hspace{10cm}}\]\\
+\underline{\hspace{20cm}}\\[0.3cm]
+\[\text{Si}\lim_{x \to +\infty} h(x) =+\infty \text{ et }\lim_{x \to +\infty}\frac{h(x)}{x}=\gamma \in\mathbb{R}^{*}\text{ et }\lim_{x \to +\infty}[h(x)-\gamma x]=+\infty\text{ alors } \underline{\hspace{10cm}}\]\\
+\underline{\hspace{20cm}}\\[0.3cm]
+\question\\
+Soit \( g(x) = \left\{
+\begin{array}{ll}
+    x^2 + 1 & \text{si } x \leq 1 \\
+    3x - 1 & \text{si } x > 1
+\end{array}
+\right. \). \\
+\[
+\lim_{x \to 1^-} g(x) = \underline{\hspace{2cm}}, \quad \lim_{x \to 1^+} g(x) = \underline{\hspace{2cm}}, \quad g(1) = \underline{\hspace{2cm}}
+\]
+\underline{\hspace{20cm}}\\[0.3cm]
+\underline{\hspace{20cm}}
+
+\question\\
+Soit \( h \) une fonction continue et croissante sur \( [a;b] \) alors \( h\left( [a;b] \right)=\underline{\hspace{5cm}}\\[0.3cm]  \)\\
+Soit \( g \) une fonction continue et décroissante sur \( [a;b[ \) alors \( h\left( [a;b[ \right)=\underline{\hspace{5cm}}\\[0.3cm]  \)\\
+\end{document}
