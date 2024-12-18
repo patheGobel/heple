@@ -1,0 +1,141 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amssymb,mathrsfs,tikz,times,pifont}
+\usepackage{enumitem}
+\newcommand\circitem[1]{%
+\tikz[baseline=(char.base)]{
+\node[circle,draw=gray, fill=red!55,
+minimum size=1.2em,inner sep=0] (char) {#1};}}
+\newcommand\boxitem[1]{%
+\tikz[baseline=(char.base)]{
+\node[fill=cyan,
+minimum size=1.2em,inner sep=0] (char) {#1};}}
+\setlist[enumerate,1]{label=\protect\circitem{\arabic*}}
+\setlist[enumerate,2]{label=\protect\boxitem{\alph*}}
+%%%::::::by chnini ameur :::::::%%%
+\everymath{\displaystyle}
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=1.7cm]{geometry}
+\usepackage{array,multirow}
+\usepackage[most]{tcolorbox}
+\usepackage{varwidth}
+\tcbuselibrary{skins,hooks}
+\usetikzlibrary{patterns}
+%%%::::::by chnini ameur :::::::%%%
+\newtcolorbox{exa}[2][]{enhanced,breakable,before skip=2mm,after skip=5mm,
+colback=yellow!20!white,colframe=black!20!blue,boxrule=0.5mm,
+attach boxed title to top left ={xshift=0.6cm,yshift*=1mm-\tcboxedtitleheight},
+fonttitle=\bfseries,
+title={#2},#1,
+% varwidth boxed title*=-3cm,
+boxed title style={frame code={
+\path[fill=tcbcolback!30!black]
+([yshift=-1mm,xshift=-1mm]frame.north west)
+arc[start angle=0,end angle=180,radius=1mm]
+([yshift=-1mm,xshift=1mm]frame.north east)
+arc[start angle=180,end angle=0,radius=1mm];
+\path[left color=tcbcolback!60!black,right color = tcbcolback!60!black,
+middle color = tcbcolback!80!black]
+([xshift=-2mm]frame.north west) -- ([xshift=2mm]frame.north east)
+[rounded corners=1mm]-- ([xshift=1mm,yshift=-1mm]frame.north east)
+-- (frame.south east) -- (frame.south west)
+-- ([xshift=-1mm,yshift=-1mm]frame.north west)
+[sharp corners]-- cycle;
+},interior engine=empty,
+},interior style={top color=yellow!5}}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{fancyhdr}
+\usepackage{eso-pic}         % Pour ajouter des éléments en arrière-plan
+% Commande pour ajouter du texte en arrière-plan
+%\AddToShipoutPicture{
+%    \AtTextCenter{%
+%        \makebox[0pt]{\rotatebox{80}{\textcolor[gray]{0.7}{\fontsize{5cm}{5cm}\selectfont PGB}}}
+%    }
+%}
+\usepackage{lastpage}
+\fancyhf{}
+\pagestyle{fancy}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footruleskip}{10pt}
+\fancyfoot[R]{
+\color{blue}\ding{45}\ \textbf{2024}
+}
+\fancyfoot[L]{
+\color{blue}\ding{45}\ \textbf{Prof:M. Diallo}
+}
+\cfoot{\bf
+\thepage /
+\pageref{LastPage}}
+\begin{document}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand{\arrayrulewidth}{1.2pt}
+\begin{tikzpicture}[overlay,remember picture]
+\node[draw=blue,line width=1.2pt,fill=purple,text=blue,inner sep=3mm,rounded corners,pattern=dots]at ([yshift=-2.5cm]current page.north) {\begingroup\setlength{\fboxsep}{0pt}\colorbox{white}{\begin{tabular}{|*1{>{\centering \arraybackslash}p{0.28\textwidth}} |*2{>{\centering \arraybackslash}p{0.2\textwidth}|} *1{>{\centering \arraybackslash}p{0.19\textwidth}|} }
+\hline
+\multicolumn{3}{|c|}{$\diamond$$\diamond$$\diamond$\ \textbf{Lycée de Dindéfélo}\ $\diamond$$\diamond$$\diamond$ }& \textbf{A.S. : 2024/2025} \\ \hline
+\textbf{Matière: Mathématiques}& \textbf{Niveau : $2^{nd}$}\textbf{S} &\textbf{Date: 19/12/2024} & \textbf{Durée : 4 heures} \\ \hline
+\multicolumn{4}{|c|}{\parbox[c]{10cm}{\begin{center}
+\textbf{{\Large\sffamily Devoir n$ ^{\circ} $ 1 Du 1$ ^\text{\bf er} $ Semestre}}
+\end{center}}} \\ \hline
+\end{tabular}}\endgroup};
+\end{tikzpicture}
+\vspace{3cm}
+
+\section*{\underline{Exercice 1 :} $4$ points}
+
+\begin{enumerate}
+    \item Complète les pointillés par ce qui convient. \\
+    Soit \( a \) un réel non nul, \( r \) un réel positif, \( m \) et \( n \) deux entiers relatifs. \\[2mm]
+    \(
+    a^m a^n = a^{\dots} \quad ; \quad \frac{a^m}{a^n} = a^{\dots} \quad ; \quad (a^m)^n = a^{\dots} \quad ; \quad \frac{1}{a^n} = a^{\dots} \quad ; \quad \sqrt{a^2 r} = \dots \sqrt{\dots}
+    \) \hfill (0,5x5pts)
+
+    \item Soient \( a \, ; \, b \, \text{et} \, c \) trois réels non nuls. Mettre sous la forme \( a^n \times b^p \times c^q \) avec \\ 
+    \( n; p \, \text{et} \, q \) \textit{des nombres entiers}, le réel suivant :\\[2mm]
+    \[
+    C = \frac{(a^2 b^3)^{-3} \times (bc^3) \times (a^{-2} b^5)^3}{(b^2 c^2a)^{-4} \times (a^{-1} b^6)^2}.
+    \]
+    \hfill 1,5pt
+\end{enumerate}
+
+\section*{\underline{Exercice 1 :} $9,5$ points}
+
+\begin{enumerate}
+    \item On donne \( u = \frac{2 - \sqrt{3}}{2 + \sqrt{3}} \) et \( v = \frac{2 + \sqrt{3}}{2 - \sqrt{3}} \). On donne \( T = \sqrt{u} + \sqrt{v} \) et \( S = \sqrt{u} - \sqrt{v} \). 
+    \begin{enumerate}
+        \item[a)] Calculer \( uv \, ; \, u + v \, \text{et} \, u - v \). \hfill (0,5 $\times$ 3)pt
+        \item[b)] Trouver une écriture simplifiée de \( \sqrt{u} \, \text{et de} \, \sqrt{v} \). \hfill (0,5 $\times$ 2)pt
+        \item[c)] Montrer que \( T > 0 \, \text{et} \, S < 0 \). 
+        \item[d)] Calculer \( T^2 \, \text{et} \, S^2 \). En déduire la valeur de \( T \, \text{et celle de} \, S \). \hfill (0,5 $\times$ 4)pts
+    \end{enumerate}
+
+    \item 
+    \begin{enumerate}
+        \item[a)] Développer \( (2\sqrt{2} - 6)^2 \, \text{et} \, (2\sqrt{2} - 6)^2 \). \hfill (0,5 $\times$ 2)pt
+        \item[b)] Montrer que le nombre 
+        \( \alpha = \sqrt{\frac{\sqrt{44 - 24\sqrt{2}} + 3\sqrt{44 + 24\sqrt{2}}- 2\sqrt{8}}{-18 + \sqrt{38 - 12\sqrt{2}} + \sqrt{32}}}        
+        \) est un entier naturel. \hfill 1pt
+    \end{enumerate}
+    \item Soient \( x, y \, \text{et} \, z \) trois réels strictement positifs tels que \( x < y \).
+\begin{enumerate}
+    \item[a)] Comparer \( \frac{x}{y} \, \text{et} \, \frac{x+z}{y+z} \). \hfill 1pt
+
+    \item[b)] En déduire une comparaison de \( \frac{2}{5} \, \text{et} \, \frac{2 + \sqrt{3}}{5 + \sqrt{3}} \) \, ; \quad 
+    \( \frac{\sqrt{2}}{4} \, \text{et} \, \frac{\sqrt{2} + 2}{6} \). \hfill (0,5 $\times$ 2)pt
+\end{enumerate}
+\item Soit \( a \) un nombre réel strictement négatif, comparer \( \frac{5a}{12} \, \text{et} \, \frac{3a}{12} \). \hfill 1pt
+\end{enumerate}
+
+\section*{\underline{Exercice 1 :} $6,5$ points}
+
+\noindent Résoudre dans \( \mathbb{R} \) les équations et les inéquations suivantes : 
+\begin{enumerate}
+    \item[a)] \( |2x - 1| \leq 2 \) \hfill 1pt
+    \item[b)] \( |3x + 5| > 2 \) \hfill 1pt
+    \item[c)] \( |-2x + 4| = -2 \) \hfill 1pt
+    \item[d)] \( d(x; 1) = 2x - 4 \) \hfill 1pt
+    \item[e)] \( |2x + 1| - |x - 3| = -1 \) \hfill 1,5pt
+    \item[f)] \( |4x + 7| = \sqrt{3} - 2 \) \hfill 1pt
+\end{enumerate}
+
+\end{document}
