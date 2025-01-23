@@ -1,0 +1,120 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}  % Gestion des caractères UTF-8
+\usepackage{graphicx}        % Inclusion d'images
+\usepackage{geometry}        % Gestion des marges
+\usepackage{fancyhdr}        % Personnalisation des en-têtes et pieds de page
+\usepackage{amsmath}         % Environnements et commandes mathématiques avancés
+\usepackage{amssymb}         % Symboles mathématiques supplémentaires
+\usepackage{amsfonts}        % Polices mathématiques supplémentaires
+\usepackage{mathtools}       % Extensions et améliorations de amsmath
+\usepackage{esint}           % Symboles d'intégrale supplémentaires
+
+\geometry{top=2cm, bottom=2cm, left=2cm, right=2cm}
+
+% Ajuster la hauteur de l'en-tête si nécessaire
+\setlength{\headheight}{25pt} 
+
+% Personnalisation de l'en-tête uniquement pour la première page
+\fancypagestyle{firstpage}{
+    \fancyhead[L]{\includegraphics[width=1.5cm]{flag.png}} % Image du drapeau
+    \fancyhead[R]{\raisebox{-0.3cm}{\includegraphics[width=1.5cm]{logo.png}}\hspace{0.1cm}} % Image du logo
+    \fancyhead[C]{\hspace{-1.5cm} \textbf{République du Sénégal\\ Un peuple – Un but – Une foi\\ Ministère de l'Éducation Nationale\\ IA Tambacounda}}
+    \fancyfoot{} % Pas de pied de page
+    \renewcommand{\headrulewidth}{0pt} % Pas de ligne sous l'en-tête
+}
+
+\pagestyle{plain} % Style de page par défaut pour les pages suivantes
+
+\begin{document}
+
+% Appliquer le style "firstpage" pour la première page
+\thispagestyle{firstpage}
+
+% Lignes sous l'entête
+\noindent
+\begin{tabular}{@{}p{0.5\textwidth}p{0.5\textwidth}@{}}
+    \textbf{ANNÉE SCOLAIRE : 2024/2025} & \raggedleft \textbf{NIVEAU : 4ième}
+\end{tabular}
+
+\vspace{0.5cm}
+
+% Contenu centré
+\begin{center}
+    \textbf{DURÉE : 2H}\\
+    \textbf{DEVOIR N°1 DU PREMIER SEMESTRE : ZONE B-B-G-G-T-T}\\
+    \textbf{\Large ÉPREUVE DE MATHÉMATIQUES}
+\end{center}
+
+\vspace{0.5cm}
+
+\section*{\underline{Exercice 1 : 7,5 points}}
+
+\textbf{Partie A : Réponds par Vrai ou Faux}
+
+\begin{enumerate}
+    \item $\frac{1}{3}$ est un nombre décimal \dotfill
+    \item $3,14\ldots$ est un nombre rationnel \dotfill
+    \item On a $-3^2 = (-3)^2$ \dotfill
+    \item Quel que soit le nombre rationnel $A$, $-A$ est négatif \dotfill
+    \item Tout nombre qui s'écrit sous la forme $\frac{a}{b}$ est un nombre rationnel \dotfill
+    \item Tout nombre décimal est un nombre rationnel \dotfill
+\end{enumerate}
+
+\textbf{Partie B : Recopie puis complète les phrases suivantes.}
+
+\begin{enumerate}
+    \item Soit $a \in \mathbb{Z}$ et $b \in \mathbb{Z}$, le nombre $\frac{a}{b}$ est \dotfill avec \dotfill
+    \item Soit $\frac{a}{b}$ un nombre rationnel et $n$ un nombre entier naturel, on a : 
+    $\left(\frac{a}{b}\right)^{-n} = \left(\frac{b}{a}\right)^n$ \dotfill
+    \item Si $|a| = |b|$ alors \dotfill
+    \item Si $a > b$ et $c$ nombre négatif alors $a \times c$ \dotfill $b \times c$
+    \item La valeur absolue d’un nombre rationnel n’est jamais \dotfill
+    \item Les rationnel $a$ et $b$ sont inverses si leur \dotfill est égal à \dotfill
+    \item L’inverse de $\frac{1}{3}$ est \dotfill et l’opposé de $\frac{132}{11}$ est \dotfill
+\end{enumerate}
+
+\section*{Exercice 2 :}
+
+\begin{enumerate}
+    \item Complète les pointillés par le nombre qui convient :
+    \[
+    \frac{9}{7} = \frac{\dots}{-133} \, ; \quad \frac{5}{3} = \frac{45}{\dots} \, ; \quad \frac{\dots}{8} = \frac{36}{32} \, ; \quad \frac{-5}{\dots} = \frac{65}{169}
+    \]
+    
+    \item Rends irréductible les nombres rationnels suivants :
+    \[
+    \frac{210}{165} \, ; \quad \frac{63}{-18} \, ; \quad \frac{3500}{4900} \, ; \quad \frac{-84}{72}
+    \]
+        \item[3)] Donne l'écriture scientifique des nombres suivants :
+    \[
+    A = 0,0009 \quad \quad B = -0,00016 \quad \quad C = 13000 \quad \quad D = -7350
+    \]
+\end{enumerate}
+
+\section*{Exercice 3}
+
+\begin{enumerate}
+    \item Calcule et donne le résultat sous la forme irréductible :
+    \[
+    A = \frac{-2}{3} \times \frac{27}{25} \times \frac{-5}{9} \quad
+    B = -\frac{3}{2} + \frac{1}{4} + \frac{1}{6}
+    \]
+    \[
+    C = \left( -\frac{3}{4} \div \frac{81}{16} \right) \times \frac{27}{-4} \quad
+    D = \left( 41 \times \frac{2}{13} \right) \div \left( 1 + \frac{7}{8} \right)
+    \]
+
+    \item Écris sous la forme d’une puissance de 10 les expressions suivantes :
+    \[
+    I = (10^{-3})^2 \times 10^5 \quad
+    J = \frac{10^4 \times 10^5}{10^{11}} \quad
+    k = \frac{0,1}{10^2} \quad
+    P = 1000000 \quad
+    M = (0,00001)^{-4}
+    \]
+    \[
+    N = 0,001 \times \frac{1}{10^{-2}}
+    \]
+\end{enumerate}
+
+\end{document}
