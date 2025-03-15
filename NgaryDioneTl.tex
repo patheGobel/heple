@@ -1,0 +1,161 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{array,amsmath,amssymb,mathrsfs, makecell,tikz,times,pifont}
+\usepackage{enumitem}
+
+\newcommand\circitem[1]{%
+\tikz[baseline=(char.base)]{
+\node[circle,draw=gray, fill=red!55,
+minimum size=1.2em,inner sep=0] (char) {#1};}}
+\newcommand\boxitem[1]{%
+\tikz[baseline=(char.base)]{
+\node[fill=cyan,
+minimum size=1.2em,inner sep=0] (char) {#1};}}
+\setlist[enumerate,1]{label=\protect\circitem{\arabic*}}
+\setlist[enumerate,2]{label=\protect\boxitem{\alph*}}
+%%%::::::by chnini ameur :::::::%%%
+\everymath{\displaystyle}
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=1.7cm]{geometry}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
+\usepackage{array,multirow}
+\usepackage[most]{tcolorbox}
+\usepackage{varwidth}
+\usepackage{float} %pour utiliser l'option [H] qui force l'image à apparaître exactement à l'endroit où elle est placée dans le code.
+\tcbuselibrary{skins,hooks}
+\usetikzlibrary{patterns}
+%%%::::::by chnini ameur :::::::%%%
+\newtcolorbox{exa}[2][]{enhanced,breakable,before skip=2mm,after skip=5mm,
+colback=yellow!20!white,colframe=black!20!blue,boxrule=0.5mm,
+attach boxed title to top left ={xshift=0.6cm,yshift*=1mm-\tcboxedtitleheight},
+fonttitle=\bfseries,
+title={#2},#1,
+% varwidth boxed title*=-3cm,
+boxed title style={frame code={
+\path[fill=tcbcolback!30!black]
+([yshift=-1mm,xshift=-1mm]frame.north west)
+arc[start angle=0,end angle=180,radius=1mm]
+([yshift=-1mm,xshift=1mm]frame.north east)
+arc[start angle=180,end angle=0,radius=1mm];
+\path[left color=tcbcolback!60!black,right color = tcbcolback!60!black,
+middle color = tcbcolback!80!black]
+([xshift=-2mm]frame.north west) -- ([xshift=2mm]frame.north east)
+[rounded corners=1mm]-- ([xshift=1mm,yshift=-1mm]frame.north east)
+-- (frame.south east) -- (frame.south west)
+-- ([xshift=-1mm,yshift=-1mm]frame.north west)
+[sharp corners]-- cycle;
+},interior engine=empty,
+},interior style={top color=yellow!5}}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{fancyhdr}
+%\usepackage{eso-pic}         % Pour ajouter des éléments en arrière-plan
+% Commande pour ajouter du texte en arrière-plan
+\usepackage{tkz-tab}
+%\AddToShipoutPicture{
+   % \AtTextCenter{%
+      %  \makebox[0pt]{\rotatebox{35}{\textcolor[gray]{0.5}{\fontsize{1.5cm}{1.5cm}\selectfont DIONE@MATHS TL}}}
+%    }
+%}
+\usepackage{lastpage}
+\fancyhf{}
+\pagestyle{fancy}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footruleskip}{10pt}
+\fancyfoot[R]{
+\color{red}\ding{45}\ \textbf{TL, 2025}
+}
+\fancyfoot[L]{
+\color{black}\ding{45}\ \textbf{Prof : M. DIONE}
+}
+\cfoot{\bf
+\thepage /
+\pageref{LastPage}}
+\begin{document}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand{\arrayrulewidth}{1.2pt}
+\begin{tikzpicture}[overlay,remember picture]
+\node[draw=black,line width=1.2pt,fill=purple,text=black,inner sep=3mm,rounded corners,pattern=dots]at ([yshift=-2.5cm]current page.north) {\begingroup\setlength{\fboxsep}{0pt}\colorbox{white}{\begin{tabular}{|*1{>{\centering \arraybackslash}p{0.28\textwidth}} |*2{>{\centering \arraybackslash}p{0.2\textwidth}|} *1{>{\centering \arraybackslash}p{0.19\textwidth}|} }
+\hline
+\multicolumn{3}{|c|}{$\star$$\star$$\star$\ \textbf{Lycée ex CEM de Koumbal}\ $\star$$\star$$\star$ }& \textbf{A.S. : 2024/2025} \\ \hline
+
+\multicolumn{4}{|c|}{\parbox[c]{10cm}{\begin{center}
+\textbf{{\Large\sffamily DEVOIR N°1 DU SECOND SEMESTRE}}
+\end{center}}} \\ \hline
+\end{tabular}}\endgroup};
+\end{tikzpicture}
+\vspace{3cm}
+
+\section*{\underline{Exercice 1}: (10 pts)}
+Dans les affirmations suivantes, l'élève choisira une seule parmi les réponses proposées (\textit{chaque bonne reponse t'apportera 1 pt}).\\
+
+\renewcommand{\arraystretch}{2} % Pour aérer un peu les lignes du tableau
+
+\raggedright
+\begin{tabular}{|c|p{6cm}|p{3.2cm}|p{3.2cm}|p{4.2cm}|}
+\hline
+N° & Affirmations & Réponse A & Réponse B & Réponse C \\
+\hline
+1 & $\lim\limits_{x \to 0} x^4 \ln(x) =$ & $+\infty$ & $0$ & $-\infty$ \\
+\hline
+2 & $\lim\limits_{x \to +\infty} e^x = $ & $0$ & $ e$ & $+\infty$  \\
+\hline
+3 & \makecell[l]{L'équation $\ln(3x-4) = \ln(2x - 1)$\\ a pour solution :} & S = \{1\} & S = \{-3\} & S = \{3\}  \\
+\hline
+4 & \makecell[l]{L'inéquation\\ $\ln(x^2 +1)\leq \ln(2x^2 + x+ 2) $\\ 
+  a pour solution} & S = $\emptyset$ & S = $]-\infty ; 0]$ & S = [0 ; 1]  \\
+\hline 
+5 & $\lim\limits_{x \to +\infty} \frac{\ln(x)}{x} = $ & $0$ & $+\infty$ & $-\infty $  \\
+\hline
+6 & \makecell[l]{$f(x) = \ln\left( \frac{x-1}{x}\right) $ a pour\\ domaine de définition} & $D_f = \mathbb{R}$  & $D_f = \mathbb{R^*}$ & $D_f  = ]-\infty ;0[ \cup ]1 ; +\infty[$  \\
+\hline
+7 &  $\lim\limits_{x \to 0} \frac{e^x -1}{x}=$ & 1 & $\frac{1}{2}$ & $0$  \\
+\hline
+8 & \makecell[l]{Le domaine de la fonction\\ $f(x)= x+3e^x $ est :} & $D_f = \mathbb{R}$ & $D_f = \mathbb{R^*} $ & $D_f = ]0 ; +\infty[ $  \\
+\hline 
+9 & \makecell[l]{La dérivée de la fonction\\ $f(x) = \ln(x-e)$ est :}  & $f'(x) = \frac{e}{x-1}$ &  $f'(x) = \frac{-1}{x-e}$ &  $f'(x) = \frac{1}{x-e}$ \\
+\hline
+10 & La dérivée de la fonction $f(x) = \frac{e^x}{x}$ est : & $f'(x) = \frac{e^x(x-1)}{x^2}$  & $f'(x)= \frac{e^x(x+1)}{x^2}$  & $f'(x)= \frac{e^x(x-1)}{x}$\\
+\hline
+\end{tabular}
+
+\section*{\underline{Exercice 2}: (05 pts)}
+Soit $f(x) = x^{3} -2x^{2}-x+2 $
+\begin{enumerate}
+
+\item Calculer $f(1)$ puis factorise complètement $f(x)$  (\textbf{1 pt})
+\item Résoudre $(ln(x))^{3}-2(ln(x))^{2} -ln(x)+2 =0$   (\textbf{0.5 pt})
+\item {Résoudre $ f(ln(x+2))= 0 $ }   (\textbf{0.5 pt})
+\item Résoudre dans $\mathbb{R}^{2}$:
+\[
+\begin{cases}
+x+y=3\\
+ln(x)+ln(y)=ln(2)
+\end{cases}  (\textbf{1 pt})
+\] 
+
+\item Développer $x(x-1)(x-2)$   (\textbf{0.5 pt})
+\item Résoudre $(2ln(x))^{3}-6(ln(x))^{2} +4ln(x)=0$   (\textbf{0.5 pt})
+\item $2e^{2x}+4e^{y}+2=0$    (\textbf{1 pt})
+\item Résoudre dans $\mathbb{R}^{2}$ : 
+\[
+\begin{cases}
+e^{x}-2e^{y}=-5\\
+3e^{x}+e^{y}=13 
+\end{cases}  (\textbf{0.5 pt})
+\]
+
+\end{enumerate}
+
+
+\section*{\underline{Problème}: (5 pts)}
+Soit $f$ la foncion définie par ; $f(x)= \ln\left(\frac{2x+2}{x-1}\right)$
+\begin{enumerate}
+\item Déterminer $Df$, les limites aux bornes de $Df$ et les éventuelles asymptotes (\textbf{1 pt})
+\item Drésser le tableau de variation de $f$   (\textbf{1 pt})
+\item Dterminer une équation de la tangente en $A$ intersection de $(Cf)$ et l'axe $(xx')$  (\textbf{0.5 pt})
+\item $(Cf)$ rencontre -t-elle $(yy')$ ? justifie ta réponse.     (\textbf{0.5 pt})
+\item Montrer  $\Omega(0;\ln(2))$ est un centre de symétrie de $(Cf)$.   (\textbf{1 pt})
+\item Tracer $(Cf)$ dans un repère orthonormé directe.    (\textbf{1 pt})
+\end{enumerate}
+
+\end{document}
