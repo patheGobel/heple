@@ -1,0 +1,134 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{array,amsmath,amssymb,mathrsfs, makecell,tikz,times,pifont}
+\usepackage{enumitem}
+\newcommand\circitem[1]{%
+\tikz[baseline=(char.base)]{
+\node[circle,draw=gray, fill=red!55,
+minimum size=1.2em,inner sep=0] (char) {#1};}}
+\newcommand\boxitem[1]{%
+\tikz[baseline=(char.base)]{
+\node[fill=cyan,
+minimum size=1.2em,inner sep=0] (char) {#1};}}
+\setlist[enumerate,1]{label=\protect\circitem{\arabic*}}
+\setlist[enumerate,2]{label=\protect\boxitem{\alph*}}
+%%%::::::by chnini ameur :::::::%%%
+\everymath{\displaystyle}
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=1.7cm]{geometry}
+\usepackage{array,multirow}
+\usepackage[most]{tcolorbox}
+\usepackage{varwidth}
+\tcbuselibrary{skins,hooks}
+\usetikzlibrary{patterns}
+%%%::::::by chnini ameur :::::::%%%
+\newtcolorbox{exa}[2][]{enhanced,breakable,before skip=2mm,after skip=5mm,
+colback=yellow!20!white,colframe=black!20!blue,boxrule=0.5mm,
+attach boxed title to top left ={xshift=0.6cm,yshift*=1mm-\tcboxedtitleheight},
+fonttitle=\bfseries,
+title={#2},#1,
+% varwidth boxed title*=-3cm,
+boxed title style={frame code={
+\path[fill=tcbcolback!30!black]
+([yshift=-1mm,xshift=-1mm]frame.north west)
+arc[start angle=0,end angle=180,radius=1mm]
+([yshift=-1mm,xshift=1mm]frame.north east)
+arc[start angle=180,end angle=0,radius=1mm];
+\path[left color=tcbcolback!60!black,right color = tcbcolback!60!black,
+middle color = tcbcolback!80!black]
+([xshift=-2mm]frame.north west) -- ([xshift=2mm]frame.north east)
+[rounded corners=1mm]-- ([xshift=1mm,yshift=-1mm]frame.north east)
+-- (frame.south east) -- (frame.south west)
+-- ([xshift=-1mm,yshift=-1mm]frame.north west)
+[sharp corners]-- cycle;
+},interior engine=empty,
+},interior style={top color=yellow!5}}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{fancyhdr}
+\usepackage{eso-pic}         % Pour ajouter des éléments en arrière-plan
+% Commande pour ajouter du texte en arrière-plan
+\AddToShipoutPicture{
+    \AtTextCenter{%
+        \makebox[0pt]{\rotatebox{80}{\textcolor[gray]{0.7}{\fontsize{5cm}{5cm}\selectfont PGB}}}
+    }
+}
+\usepackage{lastpage}
+\fancyhf{}
+\pagestyle{fancy}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footruleskip}{10pt}
+\fancyfoot[R]{
+\color{blue}\ding{45}\ \textbf{2025}
+}
+\fancyfoot[L]{
+\color{blue}\ding{45}\ \textbf{Prof:Mme Mbathie}
+}
+\cfoot{\bf
+\thepage /
+\pageref{LastPage}}
+\begin{document}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand{\arrayrulewidth}{1.2pt}
+\begin{tikzpicture}[overlay,remember picture]
+\node[draw=blue,line width=1.2pt,fill=purple,text=blue,inner sep=3mm,rounded corners,pattern=dots]at ([yshift=-2.5cm]current page.north) {\begingroup\setlength{\fboxsep}{0pt}\colorbox{white}{\begin{tabular}{|*1{>{\centering \arraybackslash}p{0.28\textwidth}} |*2{>{\centering \arraybackslash}p{0.2\textwidth}|} *1{>{\centering \arraybackslash}p{0.19\textwidth}|} }
+\hline
+\multicolumn{3}{|c|}{ \textbf{IA : TAMBACOUNDA} $\diamond$$\diamond$$\diamond$\ \textbf{ CEM : ST-MALÈME}\ $\diamond$$\diamond$$\diamond$ }& \textbf{A.S. : 2024/2025} \\ \hline
+\textbf{Matière: Mathématiques}& \textbf{Niveau : 3}\textbf{ème} &\textbf{Date: 20/03/2025} & \textbf{Durée : 2 heures} \\ \hline
+\multicolumn{4}{|c|}{\parbox[c]{10cm}{\begin{center}
+\textbf{{\Large\sffamily Devoir n$ ^{\circ} $ 1 Du 2$ ^\text{\bf nd} $ Semestre}}
+\end{center}}} \\ \hline
+\end{tabular}}\endgroup};
+\end{tikzpicture}
+\vspace{3cm}
+
+\section*{\underline{Exercice 1}: (6 pts)}
+
+Choisir la bonne réponse
+\begin{center}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|p{5cm}|p{3.8cm}|p{3.8cm}|p{4.3cm}|}
+        \hline
+        N° & \textbf{Énoncés} & \textbf{réponse A} & \textbf{réponse B} & \textbf{réponse C} \\
+        \hline
+        1 & \makecell[l]{L’équation $|x - 7| = 7$ admet\\ comme solution} & $\emptyset$ & $[0;14]$ & $\{0;14\}$ \\
+        \hline
+        2 & \makecell[l]{L’équation $x^2 + 1 = 0$} & admet deux solutions & admet une solution & n’admet pas de solution \\
+        \hline
+        3 & \makecell[l]{L’équation $x^2 = 9$ a pour\\ solution} & $\{3\}$ & $\{-3;3\}$ & n’admet pas de solution \\
+        \hline
+        4 & \makecell[l]{Si $\widehat{ABC} + \widehat{ACB} = 90^\circ$, alors} & $\cos \widehat{ABC} = \sin \widehat{ACB}$ & $\cos \widehat{BCA} = \sin \widehat{ACB}$ & $\cos \widehat{CAB} = \sin \widehat{ABC}$ \\
+        \hline
+        5 & \makecell[l]{Pour tout angle $\alpha$ on a\\ $(\cos \alpha)^2 + (\sin \alpha)^2$ égal à} & $-1$ & $1$ & $2$ \\
+        \hline
+        6 & \makecell[l]{$\cos 60^\circ$ est égal à} & $\frac{\sqrt{3}}{2}$ & $\frac{1}{2}$ & $\sqrt{3}$ \\
+        \hline
+    \end{tabular}
+\end{center}
+\section*{\underline{Exercice 2}: (8 pts)}
+
+\textbf{A.} Résoudre dans $\mathbb{R}$ les équations ci-dessous :
+
+$$\text{1)}\quad x^2 - 81 = 0\quad\quad \text{2)}\quad x^2 + 1 = 0 \quad\quad \text{3)}\quad 16x^2 - 25 = 0 \quad\quad \text{4)}\quad\quad\quad |2x + 5| = 5 \quad\quad \text{4)}\quad |2x - 1| = |x + 4|$$
+
+
+\textbf{B.} Résoudre dans $\mathbb{R}$ les inéquations suivantes :
+
+$$\text{1)}\quad (2x - 1)(x + 2) \geq 0 \quad\quad \text{2)}\quad x^2 - 9 \leq 0 $$  
+
+\vspace{1cm}
+
+\section*{\underline{Exercice 3}: (8 pts)}
+
+\begin{enumerate}
+\item Construis le triangle $ABC$ rectangle en $A$ tel que : $AB = 8cm$ et $AC = 6cm$.  
+
+\item Calcule $BC$, $\cos \widehat{ABC}$, $\sin \widehat{ABC}$.  
+
+\item Place le point $M$ sur le segment $[AB]$ tel que : $AM = \frac{1}{3} AB$.  
+
+\item La parallèle à $(BC)$ passant par $M$ coupe $(AC)$ en $N$. Calcule $AN$.  
+
+\item Soient $O$ et $P$ les symétriques respectifs des points $M$ et $N$ par rapport à $A$. Montre que $(MN)$ est parallèle à $(OP)$.  
+\end{enumerate}
+
+\end{document}
